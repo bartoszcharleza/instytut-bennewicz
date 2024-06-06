@@ -1,0 +1,98 @@
+/**
+ * Colours
+ */
+$color-primary: #1ad2d6;
+$color-secondary: #ef9700;
+$color-tertiary: #0940b1;
+$color-gray: #f5f5f5;
+
+$color-primary-gradient: linear-gradient(130deg, #15faff, #1ad2d6, #0d96a7);
+$color-secondary-gradient: linear-gradient(130deg, #ffb34d, #ef9700, #e46700);
+$color-tertiary-gradient: #0940b1;
+
+$color-background-1: #00375e;
+$color-background-2: #001a61;
+
+$base-colour: #11111f;
+$base-background-colour: #11111f;
+
+$secondary-background-colour: #5bc2e7;
+$secondary-colour: #5bc2e7;
+
+$success-colour: #5cb85c;
+$warning-colour: #f0ad4e;
+$error-colour: #e42f28;
+
+/**
+ * Glass block
+ */
+
+$glass-block-background: linear-gradient(
+  130deg,
+  #ffffff10,
+  #ffffff00,
+  #ffffff00,
+  #ffffff05
+);
+$glass-block-border: 2px solid #ffffff20;
+$glass-block-shadow: 40px 40px 200px -10px #00000020;
+
+/**
+ * Contrast block
+ */
+
+$contrast-block-background: linear-gradient(130deg, #ffb34d, #ef9700, #e46700);
+$contrast-block-border: 2px solid #ffffff20;
+$contrast-block-shadow: 20px 20px 100px -10px #ef970090;
+
+/**
+ * Typography
+ */
+$lato-font-family: 'Poppins', sans-serif;
+$regular-font-weight: 400;
+$bold-font-weight: 600;
+
+$base-font-family: 'Poppins', sans-serif;
+$base-font-weight: $regular-font-weight;
+$base-line-height: 1.8;
+
+/**
+ * Breakpoints
+ */
+$breakpoint-lg: 1200px;
+$breakpoint-md: 992px;
+$breakpoint-sm: 768px;
+$breakpoint-xs: 576px;
+
+/**
+ * Animations
+ */
+$timing: ease-in-out;
+$transition: all 0.6s $timing;
+
+$headlineFontFamily: 'Poppins', sans-serif;
+$headlineBaseFontWieght: 600;
+$headlineBaseColor: #fff;
+
+// $headlineFontSizeXXL: fluid-font-size(56, 96);
+// $headlineFontSizeXL: fluid-font-size(42, 72);
+// $headlineFontSizeL: fluid-font-size(27, 46);
+// $headlineFontSizeM: fluid-font-size(21, 36);
+// $headlineFontSizeS: fluid-font-size(17, 30);
+// $headlineFontSizeXS: fluid-font-size(14, 24);
+// $headlineFontSizeXXS: fluid-font-size(13, 22);
+
+$textFontFamily: 'Poppins', sans-serif;
+$textBaseFontWieght: 300;
+$textBaseColor: #f2f3ff;
+$textBaseSize: 16px;
+
+$textFontSizeXXL: 32px;
+$textFontSizeXL: 24px;
+$textFontSizeL: 20px;
+$textFontSizeM: 16px;
+$textFontSizeS: 14px;
+$textFontSizeXS: 12px;
+$textFontSizeXXS: 10px;
+
+$linkColor: blue;

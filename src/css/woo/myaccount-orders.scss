@@ -1,0 +1,33 @@
+.woocommerce-orders-table {
+  td,
+  th {
+    padding: 12px 12px !important;
+    border-bottom: 2px solid #ffffff20;
+  }
+
+  tr {
+    transition: 0.3s;
+    &:hover {
+      background-color: #ffffff10;
+    }
+  }
+}
+
+.woocommerce-order-details .woocommerce-table {
+  td,
+  th {
+    padding: 12px 12px !important;
+    border-bottom: 2px solid #ffffff20;
+  }
+
+  tr {
+    transition: 0.3s;
+    &:hover {
+      background-color: #ffffff10;
+    }
+  }
+}
+
+.woocommerce-order-details__title {
+  margin-bottom: 32px;
+}

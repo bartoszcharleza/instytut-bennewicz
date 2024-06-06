@@ -1,0 +1,18 @@
+.l-container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  &--large {
+    max-width: 1400px;
+  }
+
+  &--full {
+    width: 100%;
+    max-width: 100%;
+
+    img {
+      width: 100%;
+    }
+  }
+}

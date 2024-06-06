@@ -1,0 +1,31 @@
+.video-background {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  z-index: -1;
+  width: 100%;
+  padding-top: 2vw;
+  padding-bottom: 2vw;
+  opacity: 0.5;
+  z-index: -4;
+
+  &--bottom {
+    top: 80%;
+  }
+  &::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(0.25turn, #004cff12, transparent, #000000aa);
+  }
+  &__video {
+    margin-top: -4px;
+    object-fit: cover;
+    transform: scale(1.3);
+  }
+}

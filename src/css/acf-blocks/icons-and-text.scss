@@ -1,0 +1,335 @@
+.icons-and-text {
+  &-items {
+    width: 100%;
+    display: flex;
+    gap: 32px;
+    justify-content: space-around;
+    @include atMedium {
+      flex-direction: column;
+      align-items: center;
+      gap: 64px;
+    }
+  }
+  &-item {
+    max-width: calc(33% - 16px);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    @include atMedium {
+      flex-direction: column;
+      max-width: 100%;
+    }
+    &-icon {
+      width: rwd(48, 80);
+      height: rwd(48, 80);
+      margin-right: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 32px;
+      @include atMedium {
+        width: 48px;
+        height: 48px;
+        margin-bottom: 16px;
+        margin-right: 0;
+      }
+    }
+    &-number-and-suffix {
+      display: flex;
+    }
+    &-text {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+
+      @include atMedium {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 4px;
+      }
+      p {
+        font-size: rwd(32, 48);
+        color: $color-secondary;
+        font-weight: 600;
+      }
+      h3 {
+        text-transform: uppercase;
+        font-size: 18px;
+        margin-left: 12px;
+
+        @include atMedium {
+          margin-left: 0;
+        }
+      }
+    }
+  }
+}
+
+.icons-and-text-2 {
+  .swiper-container {
+    overflow: hidden;
+    position: relative;
+    &::before {
+      content: '';
+      position: absolute;
+      top: 48px;
+      height: 2px;
+      left: 25%;
+      right: 60%;
+      border-bottom: 2px dashed $color-secondary;
+      pointer-events: none;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 48px;
+      height: 2px;
+      right: 25%;
+      left: 60%;
+      border-bottom: 2px dashed $color-secondary;
+      pointer-events: none;
+    }
+  }
+  .swiper-slide {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    gap: 48px;
+    img {
+      width: auto;
+      height: rwd(64, 96);
+      margin-left: auto;
+      margin-right: auto;
+      // background-color: $color-background-1;
+      width: 196px;
+      object-fit: contain;
+    }
+    &__title {
+      width: 80%;
+      margin: 0 auto;
+      text-transform: uppercase;
+      @include atMedium {
+        width: 100%;
+      }
+    }
+
+    &__text {
+      text-align: left;
+      max-width: 80%;
+      margin: 0 auto;
+      @include atMedium {
+        text-align: center;
+        max-width: 100%;
+      }
+    }
+  }
+
+  .swiper-button-prev-4 {
+    position: absolute;
+    top: 35%;
+    z-index: 6;
+    cursor: pointer;
+
+    @include atMedium {
+      top: 36px;
+    }
+  }
+
+  .swiper-button-next-4 {
+    position: absolute;
+    top: 35%;
+    right: 0;
+    z-index: 6;
+    cursor: pointer;
+
+    @include atMedium {
+      top: 36px;
+    }
+  }
+
+  .cta {
+    margin: 0 auto;
+  }
+}
+
+.icons-and-text-3 {
+  .video-background {
+    opacity: 0.2;
+    &--bottom {
+      top: unset;
+      bottom: -40%;
+      transform: none;
+    }
+  }
+  &-items {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: rwd(48, 96);
+    row-gap: rwd(32, 64);
+    justify-content: space-around;
+    max-width: 84%;
+    margin: 0 auto;
+
+    @include atMedium {
+      display: flex;
+      flex-direction: column;
+      max-width: 100%;
+    }
+  }
+  &-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    &-icon {
+      min-width: rwd(32, 64);
+      max-width: rwd(32, 64);
+      margin-right: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 32px;
+    }
+
+    &-text {
+      span {
+        color: $color-secondary;
+      }
+    }
+  }
+}
+
+.icons-and-text-4 {
+  .video-background {
+    opacity: 0.2;
+  }
+  &-items {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: rwd(24, 32);
+    row-gap: rwd(48, 64);
+    justify-content: space-around;
+    max-width: 84%;
+    margin: 0 auto;
+
+    @include atMedium {
+      display: flex;
+      flex-direction: column;
+      max-width: 100%;
+    }
+  }
+  &-item {
+    display: flex;
+    flex-direction: column;
+    gap: rwd(24, 36);
+    border-left: 1px solid $color-primary;
+    padding-left: rwd(32, 48);
+
+    &-icon {
+      min-width: rwd(32, 48);
+      max-width: rwd(32, 48);
+      margin-right: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 32px;
+    }
+
+    &-text {
+      margin: auto 0;
+      span {
+        color: $color-primary;
+      }
+    }
+  }
+}
+
+.icons-and-text-5 {
+  .swiper-container {
+    overflow: hidden;
+    position: relative;
+  }
+
+  .content {
+    width: 100%;
+    border-radius: rwd(64, 100);
+    padding: rwd(48, 64) rwd(64, 96);
+    background: $glass-block-background;
+    border: $glass-block-border;
+    box-shadow: $glass-block-shadow;
+    display: flex;
+    flex-direction: column;
+    gap: rwd(48, 64);
+    position: relative;
+    @include atMedium {
+      padding: 10vw;
+      overflow: hidden;
+    }
+  }
+
+  .heading {
+    max-width: 70%;
+    @include atMedium {
+      max-width: 50%;
+    }
+  }
+
+  .swiper-slide {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: rwd(32, 48);
+    height: auto;
+
+    &::after {
+      content: '';
+      position: absolute;
+      height: 100%;
+      width: 1px;
+      background: $color-primary-gradient;
+      left: -32px;
+
+      @include atMedium {
+        display: none;
+      }
+    }
+    img {
+      width: auto;
+      height: 36px;
+      object-fit: contain;
+    }
+
+    &__text {
+      text-align: left;
+      max-width: 400px;
+      margin: 0 auto;
+      @include atMedium {
+        margin: 0;
+        max-width: unset;
+      }
+    }
+  }
+
+  .swiper-button-prev-5 {
+    position: absolute;
+    top: rwd(48, 64);
+    right: rwd(96, 124);
+    z-index: 3;
+    cursor: pointer;
+  }
+
+  .swiper-button-next-5 {
+    position: absolute;
+    top: rwd(48, 64);
+    right: rwd(48, 64);
+    z-index: 3;
+    cursor: pointer;
+  }
+
+  .cta {
+    margin: 0 auto;
+  }
+}

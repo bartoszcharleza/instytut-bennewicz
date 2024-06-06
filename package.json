@@ -1,0 +1,33 @@
+{
+	"name": "boilerplate-html",
+	"version": "2.0.0",
+	"description": "core",
+	"main": "gulpfile.js",
+	"dependencies": {
+	  "gulp": "^4.0.2",
+	  "gulp-sass": "^5.0.0",
+	  "sass": "^1.49.9"
+	},
+	"devDependencies": {
+	  "@babel/core": "^7.18.0",
+	  "@babel/preset-env": "^7.18.0",
+	  "browser-sync": "^2.29.3",
+	  "gulp-autoprefixer": "^8.0.0",
+	  "gulp-babel": "^8.0.0",
+	  "gulp-concat": "^2.6.1",
+	  "gulp-csso": "^4.0.1",
+	  "gulp-include": "^2.4.1",
+	  "gulp-livereload": "^4.0.2",
+	  "gulp-uglify": "^3.0.2"
+	},
+	"scripts": {
+	  "test": "echo \"Error: no test specified\" && exit 1",
+	  "start": "gulp"
+	},
+	"author": "websitestyle",
+	"license": "ISC",
+	"bugs": {
+	  "url": "https://websitestyle.pl"
+	},
+	"homepage": "https://websitestyle.pl"
+  }

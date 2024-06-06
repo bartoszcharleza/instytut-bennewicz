@@ -1,0 +1,22 @@
+.courses-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  width: 100%;
+  gap: rwd(32, 48);
+  .course {
+    &__image {
+      aspect-ratio: 360/260;
+      object-fit: cover;
+      border-radius: 25px;
+      margin-bottom: 24px;
+    }
+
+    &__title {
+      margin-bottom: 12px;
+    }
+
+    &__excerpt {
+      margin-bottom: 24px;
+    }
+  }
+}

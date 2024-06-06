@@ -1,0 +1,156 @@
+.course-program {
+  z-index: unset;
+
+  .section-background {
+    z-index: -1;
+    img {
+      opacity: 0.6;
+    }
+  }
+
+  .section-container {
+    z-index: 3;
+    > .heading {
+      display: flex;
+      align-items: center;
+      gap: rwd(32, 72);
+      span {
+        &:first-child {
+          color: $color-primary;
+        }
+      }
+    }
+
+    gap: rwd(24, 52);
+  }
+
+  .course-program-items {
+    width: 100%;
+  }
+
+  .main-title {
+    display: flex;
+    padding: 0px rwd(96, 124);
+    gap: 32px;
+    align-items: center;
+    padding-bottom: rwd(24, 32);
+
+    @include atMedium {
+      padding: 0px;
+      gap: 24px;
+    }
+
+    svg {
+      @include atMedium {
+        width: 48px;
+      }
+    }
+  }
+
+  .course-program-item {
+    width: 100%;
+    transition: 0.6s;
+
+    .wysiwyg-content > ul {
+      margin-left: 0;
+    }
+
+    &__title {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      cursor: pointer;
+      color: #acc5d6;
+      transition: 0.6s;
+      font-size: 18px;
+      margin-bottom: rwd(12, 24);
+      border: 2px solid #ffffff20;
+      border-radius: 200px;
+      padding: rwd(32, 48) rwd(96, 124);
+
+      @include atMedium {
+        padding: 5vw 10vw;
+      }
+
+      &.active {
+        color: #ffffff;
+        background-color: #0041c8;
+        svg {
+          transform: rotate(180deg);
+          transition: 0.6s;
+        }
+      }
+    }
+
+    &__content {
+      max-height: 0px;
+      overflow: hidden;
+      transition: 0.6s ease-in-out;
+      padding: 0px rwd(96, 124);
+
+      @include atMedium {
+        padding: unset;
+      }
+      &.active {
+        max-height: 3000px;
+        padding-top: rwd(22, 32);
+        padding-bottom: rwd(12, 16);
+        @include atMedium {
+          padding: 5vw 0vw;
+        }
+      }
+    }
+
+    &__sessions {
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      row-gap: rwd(48, 64);
+      column-gap: rwd(96, 124);
+
+      @include atMedium {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+
+    &__session {
+      h4 {
+        color: $color-secondary;
+      }
+    }
+
+    &__supervisions {
+      margin-top: rwd(32, 48);
+      padding-top: rwd(32, 48);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      row-gap: rwd(48, 64);
+      column-gap: rwd(96, 124);
+      border-top: 2px solid #ffffff20;
+
+      @include atMedium {
+        display: flex;
+        flex-direction: column;
+      }
+
+      &-title {
+        grid-column: span 2;
+        color: $color-secondary;
+      }
+    }
+
+    &__supervision {
+      h5 {
+        color: $color-primary;
+      }
+      li::before {
+        color: $color-primary;
+      }
+    }
+  }
+  .bottom {
+    margin: 0 auto;
+  }
+}

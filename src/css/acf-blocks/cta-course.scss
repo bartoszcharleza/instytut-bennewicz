@@ -1,0 +1,287 @@
+.cta-course-1 {
+  .content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 1000px;
+    border: 2px dashed #ffffff90;
+    padding: 64px;
+    padding-bottom: 0;
+    justify-content: center;
+    align-items: center;
+    gap: 52px;
+    @include atMedium {
+      border-radius: 32px;
+      padding: 48px 24px;
+      gap: 32px;
+    }
+  }
+
+  .text {
+    color: $color-secondary;
+    font-size: 24px;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 26px;
+    @include atMedium {
+      flex-direction: column;
+      text-align: center;
+      font-size: 18px;
+    }
+  }
+
+  .btn {
+    margin-bottom: -32px;
+    z-index: 2;
+
+    @include atMedium {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.cta-course-2 {
+  .content {
+    width: 100%;
+    border-radius: rwd(64, 100);
+    background: $glass-block-background;
+    border: $glass-block-border;
+    box-shadow: $glass-block-shadow;
+    padding: rwd(48, 96);
+    justify-content: center;
+    align-items: center;
+    gap: 48px;
+    display: flex;
+    flex-direction: column;
+
+    @include atMedium {
+      flex-direction: column;
+      padding: 48px 24px;
+    }
+  }
+
+  .heading {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: rwd(24, 40);
+
+    svg {
+      width: rwd(48, 72);
+    }
+    @include atMedium {
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+
+  .checkbox_list {
+    display: flex;
+    flex-direction: row;
+    gap: rwd(32, 80);
+
+    @include atMedium {
+      flex-direction: column;
+    }
+
+    &__checkbox {
+      display: flex;
+      flex-direction: row;
+      gap: 16px;
+      align-items: center;
+      font-size: rwd(18, 24);
+
+      @include atMedium {
+        flex-direction: column;
+        gap: 4px;
+        text-align: center;
+      }
+      svg {
+        min-width: rwd(24, 40);
+        min-height: rwd(24, 40);
+        max-width: rwd(24, 40);
+        max-height: rwd(24, 40);
+      }
+    }
+  }
+}
+
+.cta-course-3 {
+  .content {
+    width: 100%;
+    border-radius: rwd(64, 100);
+    padding: rwd(48, 96);
+    background: $glass-block-background;
+    border: $glass-block-border;
+    box-shadow: $glass-block-shadow;
+    justify-content: center;
+    align-items: center;
+    gap: 10%;
+    display: flex;
+    flex-direction: row;
+
+    @include atMedium {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 48px 24px;
+    }
+    img {
+      width: 14vw;
+      border-radius: 16px;
+      @include atMedium {
+        width: 30vw;
+        margin-bottom: 24px;
+      }
+    }
+  }
+
+  .text {
+    max-width: 40%;
+    @include atMedium {
+      max-width: 100%;
+    }
+  }
+  .btn {
+    margin-top: 32px;
+    @include atMedium {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}
+
+.cta-course-4 {
+  .content {
+    width: 100%;
+    border-radius: rwd(32, 64);
+    padding: rwd(48, 96);
+    background: $glass-block-background;
+    border: $glass-block-border;
+    box-shadow: $glass-block-shadow;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 10%;
+    display: flex;
+    flex-direction: row;
+    max-width: 1364px;
+    margin: 0 auto;
+    @include atMedium {
+      flex-direction: column;
+      gap: 48px;
+      padding: 10vw;
+      padding: 48px 24px;
+    }
+  }
+
+  .column {
+    display: flex;
+    gap: 32px;
+
+    @include atMedium {
+      gap: 18px;
+    }
+    &__icon svg {
+      width: rwd(32, 64);
+    }
+
+    &__text {
+      display: flex;
+      flex-direction: column;
+      gap: rwd(8, 16);
+      p:nth-child(2) {
+        font-size: rwd(18, 24);
+        font-weight: 600;
+        line-height: 1.7;
+      }
+    }
+  }
+
+  .btn {
+    // margin-top: 32px;
+  }
+  img {
+    width: 20vw;
+  }
+}
+
+.cta-course-5 {
+  .content {
+    width: 100%;
+    border-radius: rwd(32, 64);
+    padding: rwd(48, 96);
+    background: $glass-block-background;
+    border: $glass-block-border;
+    box-shadow: $glass-block-shadow;
+    margin: 0 auto;
+    display: grid;
+    column-gap: 5%;
+    grid-template-columns: repeat(6, 1fr);
+
+    @include atMedium {
+      display: flex;
+      flex-direction: column;
+      padding: 48px 24px;
+    }
+
+    &__price {
+      grid-column: span 2;
+      font-size: rwd(24, 36);
+      line-height: 1;
+      font-weight: 600;
+      color: $color-primary;
+
+      @include atSmallMedium {
+        margin-bottom: 24px;
+        font-size: 5vw;
+      }
+      span {
+        font-size: rwd(64, 96);
+        @include atSmallMedium {
+          font-size: 15vw;
+        }
+      }
+    }
+
+    &__title {
+      grid-column: span 4;
+      text-align: right;
+      height: fit-content;
+      margin-top: auto;
+
+      @include atMedium {
+        text-align: left;
+      }
+    }
+
+    &__detail {
+      grid-column: span 2;
+      display: flex;
+      gap: rwd(24, 48);
+      margin-top: rwd(48, 64);
+      &-edition + .content__detail-edition {
+        margin-top: 24px;
+      }
+      p {
+        font-size: rwd(14, 20);
+      }
+      h3 {
+        font-size: 14px;
+        margin-bottom: 4px;
+      }
+      &-icon svg {
+        width: rwd(32, 48);
+        height: rwd(32, 48);
+      }
+    }
+
+    &__cta {
+      grid-column: 1/-1;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: rwd(12, 24);
+    }
+  }
+}

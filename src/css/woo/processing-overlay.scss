@@ -1,0 +1,15 @@
+.blockUI.blockOverlay {
+  background-color: #ffffff00 !important;
+  transition: 0.3s;
+}
+
+.processing {
+  transition: 0.3s;
+  opacity: 1;
+  border-radius: 16px;
+  overflow: hidden;
+  transition: 0.3s;
+  & > * {
+    opacity: 0.2;
+  }
+}

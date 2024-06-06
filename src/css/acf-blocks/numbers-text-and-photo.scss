@@ -1,0 +1,107 @@
+.numbers-text-and-photo {
+  .section-background {
+    height: 50%;
+    z-index: -2;
+    opacity: 0.6;
+    animation: scrollBackground 250s linear infinite;
+    background: url('/wp-content/uploads/2024/01/wave-color-secondary.png');
+    background-repeat: repeat-x;
+    background-size: 200% auto;
+    transform: rotate(180deg);
+    img {
+      display: none;
+    }
+  }
+  .section-container {
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    grid-template-rows: auto auto auto;
+    gap: 16px;
+
+    @include atMedium {
+      display: flex;
+      flex-direction: column;
+    }
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -2.5vw;
+      width: 1px;
+      height: 60%;
+      background: $color-secondary-gradient;
+      z-index: -1;
+      @include atMedium {
+        display: none;
+      }
+    }
+  }
+
+  .photo {
+    grid-column: span 3;
+    grid-row: span 3;
+    height: 100%;
+    object-fit: cover;
+    border-radius: rwd(64, 100);
+    min-width: calc(100% + 22vw);
+    margin-left: -22vw;
+    @include atMedium {
+      margin-bottom: 32px;
+      height: 70vw;
+      max-height: 70vh;
+    }
+  }
+
+  .title {
+    grid-column: 5 / end;
+    margin-bottom: rwd(24, 32);
+  }
+  .numbers {
+    display: flex;
+    grid-column: 5 / end;
+    gap: 15%;
+    margin-bottom: rwd(48, 96);
+  }
+  .number {
+    &__number {
+      font-size: rwd(100, 200);
+      line-height: 1.2em;
+      font-weight: 600;
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      color: $color-secondary;
+    }
+
+    &__suffix {
+      font-weight: 400;
+      font-size: rwd(18, 30);
+      margin-bottom: auto;
+    }
+
+    &__text {
+      font-size: rwd(18, 30);
+      line-height: 1.5;
+      position: relative;
+    }
+  }
+
+  .description {
+    grid-column: 3 / -3;
+    display: flex;
+    width: 100%;
+    gap: rwd(32, 64);
+    margin-top: rwd(48, 96);
+
+    @include atMedium {
+      display: flex;
+      flex-direction: column;
+    }
+    &__title {
+      grid-column: 5 / end;
+    }
+    &__column-1,
+    &__column-2 {
+    }
+  }
+}

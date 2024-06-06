@@ -1,0 +1,137 @@
+.course-form {
+  .section-container {
+    background: $contrast-block-background;
+    border: $contrast-block-border;
+    box-shadow: $contrast-block-shadow;
+    border-radius: rwd(64, 100);
+    padding: rwd(48, 96);
+    gap: rwd(48, 55);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include atMedium {
+      padding: 10vw;
+    }
+
+    &--login-and-register {
+      gap: rwd(16, 24);
+    }
+
+    .title {
+      span {
+        color: $color-tertiary;
+      }
+    }
+
+    .form {
+      width: 100%;
+      display: flex;
+      gap: 5%;
+      @include atMedium {
+        flex-direction: column;
+        gap: 32px;
+      }
+
+      &__column {
+        @include atMedium {
+          width: 100% !important;
+        }
+        &--1 {
+          width: 40%;
+          fieldset {
+            display: flex;
+            flex-direction: column;
+            legend {
+              margin-bottom: rwd(16, 24);
+            }
+            [type='radio'] {
+              border-radius: 0px;
+              border: 1px solid white;
+              margin-right: rwd(12, 18);
+              &:checked {
+                background-color: white;
+              }
+            }
+
+            label {
+              font-weight: 600;
+              + label {
+                margin-top: rwd(12, 16);
+              }
+            }
+            ul {
+              max-height: 0px;
+              overflow: hidden;
+              transition: 0.3s;
+              padding-left: rwd(24, 32);
+              opacity: 0;
+              &.active {
+                opacity: 1;
+                margin-top: rwd(16, 24);
+                margin-bottom: rwd(16, 24);
+                max-height: 1000px;
+              }
+              li {
+                font-weight: 500;
+                font-size: 14px;
+                text-transform: uppercase;
+                + li {
+                  margin-top: 2px;
+                }
+                span {
+                  font-size: rwd(16, 18);
+                  margin-left: 16px;
+                  text-transform: none;
+                }
+              }
+            }
+          }
+        }
+        &--2 {
+          width: 55%;
+          display: flex;
+          flex-direction: column;
+
+          .form__row {
+            display: flex;
+            flex-direction: column;
+            + .form__row {
+              margin-top: rwd(24, 38);
+            }
+          }
+          .agreement {
+            font-size: 12px;
+          }
+        }
+      }
+    }
+
+    .wpcf7-submit {
+      color: $color-secondary;
+      padding: rwd(16, 22) rwd(48, 80);
+      border-radius: rwd(64, 100);
+      position: relative;
+      cursor: pointer;
+    }
+
+    [name='termin'] {
+      display: none;
+    }
+
+    .btn--form {
+      &:hover {
+        input {
+          color: white;
+        }
+      }
+
+      &::after {
+        background: $color-primary-gradient;
+      }
+
+      &::before {
+        background: white;
+      }
+    }
+  }
+}

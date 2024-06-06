@@ -1,0 +1,83 @@
+.hero {
+  display: flex;
+  justify-content: center;
+
+  @include atMedium {
+    flex-direction: column;
+    background: transparent;
+  }
+
+  .section-container {
+    width: auto;
+    margin-right: auto;
+    margin-left: 10vw;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    gap: 3vw;
+    padding-top: 7vw;
+    padding-bottom: 2vw;
+    height: 100vh;
+    z-index: 2;
+    @include atMedium {
+      text-align: center;
+      width: 90%;
+      justify-content: center;
+      align-items: center;
+      padding-right: 0;
+      height: auto;
+      flex-direction: column;
+      margin-left: auto;
+    }
+  }
+
+  > img:not(.animated-shape) {
+    position: absolute;
+    right: -10%;
+    max-width: 70vw;
+    width: auto;
+    max-height: 95vh;
+    top: 55%;
+    transform: translateY(-50%);
+    z-index: 5;
+    animation: heroAnimation5 3s forwards;
+
+    @include atMedium {
+      position: relative;
+      top: 0;
+      right: 0;
+      transform: none;
+      max-width: unset;
+      max-height: unset;
+    }
+  }
+
+  .button-wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 22%;
+
+    @include atMedium {
+      margin-left: 0;
+    }
+
+    &__arrow {
+      margin-top: 16px;
+      margin-bottom: 16px;
+      display: block;
+      width: 1px;
+      min-height: rwd(20, 117);
+      background: $color-secondary-gradient;
+    }
+  }
+
+  .title {
+    position: relative;
+  }
+
+  p {
+    color: $color-secondary !important;
+  }
+}

@@ -1,0 +1,396 @@
+.floating-text-blocks {
+  .section-background {
+    top: 25%;
+    bottom: 25%;
+    height: 50%;
+    z-index: -1;
+  }
+
+  .section-container {
+    &:nth-child(1) {
+      gap: rwd(16, 52);
+
+      h2 {
+        font-size: rwd(100, 200);
+        color: $color-secondary;
+        line-height: 0.65;
+        margin-left: 8vw;
+        @include atMedium {
+          margin-left: auto;
+          margin-right: auto;
+          text-align: center;
+        }
+
+        @include atSmallMedium {
+          font-size: 20vw;
+        }
+      }
+      h3 {
+        margin-left: 21.5vw;
+        @include atMedium {
+          margin-left: 0;
+          margin-top: 16px;
+          text-align: center;
+        }
+      }
+      padding-bottom: rwd(64, 85);
+    }
+
+    &:nth-child(2) {
+      padding-top: 0;
+      display: grid;
+      grid-template-columns: repeat(12, minmax(0, 1fr));
+      grid-template-rows: auto auto auto;
+      gap: 32px;
+      position: relative;
+
+      @include atMedium {
+        display: flex;
+        flex-direction: column;
+        gap: 64px;
+      }
+      &:after {
+        content: '';
+        position: absolute;
+        right: 0;
+        top: 17%;
+        width: 2px;
+        height: 30%;
+        background: $color-primary-gradient;
+        bottom: 106%;
+
+        @include atMedium {
+          display: none;
+        }
+      }
+    }
+
+    .number {
+      @include atMedium {
+        text-align: center;
+        width: 100%;
+      }
+      &__number {
+        font-size: rwd(100, 200);
+        line-height: 1.2em;
+        font-weight: 600;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        color: $color-primary;
+        @include atMedium {
+          align-items: center;
+          justify-content: center;
+        }
+      }
+
+      &__suffix {
+        font-weight: 400;
+        font-size: rwd(18, 30);
+        margin-bottom: auto;
+      }
+
+      &__text {
+        font-size: rwd(18, 30);
+        line-height: 1.5;
+        position: relative;
+      }
+
+      &--1 {
+        order: 1;
+        grid-column: 1 / 3;
+        margin-top: auto;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        padding-top: 67%;
+        position: relative;
+
+        @include atMedium {
+          padding-top: 0;
+        }
+        &:after {
+          content: '';
+          position: absolute;
+          right: -3vw;
+          height: 80vh;
+          width: 2px;
+          top: 0;
+          background: $color-secondary-gradient;
+          bottom: -200vh;
+          @include atMedium {
+            display: none;
+          }
+        }
+        .number__text:after {
+          content: '';
+          position: absolute;
+          left: 0.7vw;
+          height: 70vh;
+          width: 2px;
+          background: $color-primary-gradient;
+          bottom: calc(-70vh - 42px);
+          @include atMedium {
+            display: none;
+          }
+        }
+      }
+      &--2 {
+        order: 3;
+        grid-column: 9 / span 3;
+        margin-top: -2vw;
+
+        @include atMedium {
+          margin-top: 0;
+        }
+
+        .number__number {
+          color: $color-secondary;
+        }
+
+        .number__text:after {
+          content: '';
+          position: absolute;
+          left: 42%;
+          height: 50vh;
+          width: 2px;
+          background: $color-secondary-gradient;
+          bottom: calc(-50vh - 48px);
+          @include atMedium {
+            display: none;
+          }
+        }
+      }
+      &--3 {
+        order: 6;
+        grid-row: 3;
+        grid-column: 10/12;
+        margin-top: -12.5vw;
+        position: relative;
+
+        @include atMedium {
+          margin-top: 0;
+        }
+
+        &:after {
+          content: '';
+          position: absolute;
+          left: 45%;
+          height: 13vh;
+          width: 2px;
+          background: $color-primary-gradient;
+          bottom: 106%;
+          @include atMedium {
+            display: none;
+          }
+        }
+      }
+    }
+
+    .content {
+      z-index: 2;
+      position: relative;
+      @include atMedium {
+        text-align: center;
+      }
+
+      .btn {
+        @include atMedium {
+          margin-left: auto;
+          margin-right: auto;
+        }
+      }
+      img {
+        border-radius: 1000px;
+        margin-bottom: rwd(32, 76);
+      }
+      &--1 {
+        order: 2;
+        grid-column: 4 / 8;
+      }
+      &--2 {
+        order: 4;
+        grid-row: 2;
+        grid-column: 2/6;
+        margin-top: 10vw;
+
+        @include atMedium {
+          margin-top: 0;
+        }
+
+        &:after {
+          content: '';
+          position: absolute;
+          right: -8.3vw;
+
+          width: 2px;
+          top: 32%;
+          background: $color-secondary-gradient;
+          bottom: 0;
+          @include atMedium {
+            display: none;
+          }
+        }
+      }
+      &--3 {
+        order: 5;
+        grid-row: 2;
+        grid-column: 8/12;
+        margin-top: -6vw;
+
+        @include atMedium {
+          margin-top: 0;
+        }
+      }
+    }
+  }
+}
+
+.floating-text-blocks-2 {
+  .section-background {
+    top: 25%;
+    bottom: 25%;
+    height: 50%;
+    z-index: -1;
+  }
+
+  .section-container {
+    width: 60%;
+
+    @include atMedium {
+      width: 100%;
+    }
+
+    &:nth-child(1) {
+      display: grid;
+      grid-template-columns: repeat(12, minmax(0, 1fr));
+      grid-template-rows: auto auto auto;
+      gap: rwd(64, 96);
+      position: relative;
+      @include atMedium {
+        display: flex;
+      }
+    }
+
+    .number {
+      @include atMedium {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0 auto;
+      }
+      &__number {
+        font-size: rwd(100, 200);
+        line-height: 1.2em;
+        font-weight: 600;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        color: $color-primary;
+      }
+
+      &__suffix {
+        font-weight: 400;
+        font-size: rwd(18, 30);
+        margin-bottom: auto;
+      }
+
+      &__text {
+        font-size: rwd(18, 30);
+        line-height: 1.5;
+        position: relative;
+      }
+
+      &--1 {
+        order: 2;
+        grid-column: span 6;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        grid-row: 2;
+        &::after {
+          content: '';
+          position: absolute;
+          width: 1px;
+          right: 0;
+          height: 40%;
+          background: $color-secondary-gradient;
+          @include atMedium {
+            display: none;
+          }
+        }
+      }
+      &--2 {
+        order: 3;
+        grid-column: 8 / span 4;
+        grid-row: 2;
+        .number__number {
+          color: $color-secondary;
+        }
+      }
+    }
+
+    .content {
+      z-index: 2;
+      position: relative;
+
+      @include atMedium {
+        text-align: center;
+      }
+      img {
+        border-radius: 1000px;
+        margin-bottom: rwd(32, 76);
+      }
+      &--1 {
+        order: -1;
+        grid-column: 1 / -1;
+        .btn {
+          margin-top: rwd(32, 72);
+        }
+      }
+      &--2 {
+        order: 4;
+        grid-row: 3;
+        grid-column: span 6;
+        .btn {
+          margin-top: rwd(16, 24);
+        }
+      }
+      &--3 {
+        order: 5;
+        grid-row: 3;
+        grid-column: span 6;
+        .btn {
+          margin-top: rwd(16, 24);
+        }
+      }
+    }
+
+    .line {
+      content: '';
+      position: absolute;
+      width: 1px;
+
+      &--1 {
+        left: -15%;
+        top: 5%;
+        height: 30%;
+        background-color: white;
+      }
+
+      &--2 {
+        background: $color-secondary-gradient;
+        right: -15%;
+        top: 0;
+        height: 25%;
+      }
+
+      &--3 {
+        background: $color-primary-gradient;
+        right: -25%;
+        top: 15%;
+        height: 20%;
+      }
+    }
+  }
+}

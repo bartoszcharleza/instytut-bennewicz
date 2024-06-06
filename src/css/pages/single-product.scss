@@ -1,0 +1,12 @@
+.gutenberg-content {
+  .section-container {
+    width: 100%;
+  }
+  .section:first-child .section-container {
+    padding-top: 0px !important;
+  }
+  .section .section-container {
+    padding-top: rwd(32, 48) !important;
+    padding-bottom: rwd(32, 48) !important;
+  }
+}

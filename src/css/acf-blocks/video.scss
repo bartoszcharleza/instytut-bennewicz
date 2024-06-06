@@ -1,0 +1,58 @@
+section.video {
+  // video {
+  //   height: 80vh;
+  //   margin: 0 auto;
+  //   max-width: 100%;
+  //   border-radius: rwd(64, 100);
+  //   @include atMedium {
+  //     height: auto;
+  //   }
+  // }
+
+  .video-wrapper {
+    position: relative;
+    display: inline-block;
+    border-radius: rwd(24, 50);
+    margin: 0 auto;
+    overflow: hidden;
+    img {
+      position: absolute;
+      inset: 0;
+      z-index: 2;
+      cursor: pointer;
+    }
+    &--vimeo {
+      width: 100%;
+      max-width: 850px;
+      iframe {
+        width: 100%;
+        aspect-ratio: 16/9;
+      }
+    }
+  }
+
+  .video-cover,
+  .video-player {
+    width: 100%; /* Adjust as needed */
+    display: block;
+  }
+
+  .video-player {
+    // display: none;
+  }
+
+  .play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 50px; /* Adjust size as needed */
+    width: 50px; /* Adjust size as needed */
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="109" height="109" viewBox="0 0 109 109"><g id="Group_11136" data-name="Group 11136" transform="translate(-906 -12860.117)"><circle id="Ellipse_450" data-name="Ellipse 450" cx="54.5" cy="54.5" r="54.5" transform="translate(906 12860.117)" fill="%23ef9700"/><g id="Group_2208" data-name="Group 2208" transform="translate(933 12890.117)"><path id="Path_17365" data-name="Path 17365" d="M0,0H55V49H0Z" fill="none"/><path id="Path_17366" data-name="Path 17366" d="M10,30.5,22.25,18.25,10,6V30.5" transform="translate(13.75 6.25)" fill="none" stroke="%23fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/></g></g></svg>');
+    background-size: contain;
+    background-repeat: no-repeat;
+    border: none;
+    cursor: pointer;
+    z-index: 3;
+  }
+}

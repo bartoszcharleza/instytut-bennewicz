@@ -1,0 +1,229 @@
+.course-details {
+  margin: rwd(64, 72) 0px;
+
+  .section-container {
+    border-left: 1px solid $color-secondary;
+    padding-bottom: 0;
+    position: relative;
+    padding-top: 0;
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 50%;
+      background: $color-secondary-gradient;
+      height: 1px;
+      bottom: 0;
+      left: 0;
+    }
+  }
+
+  .details-section {
+    display: flex;
+    width: 100%;
+    @include atMedium {
+      flex-direction: column;
+      + .details-section {
+        margin-top: 64px;
+      }
+    }
+
+    &.option-3 {
+      .details-section__icon {
+        @include atSmallMedium {
+          display: none;
+        }
+      }
+    }
+
+    &__icon {
+      width: 256px;
+      display: flex;
+      justify-content: center;
+
+      @include atMedium {
+        width: auto;
+        margin-right: auto;
+        padding-left: 10vw;
+      }
+
+      img,
+      svg {
+        width: rwd(64, 96);
+        height: rwd(64, 96);
+        object-fit: contain;
+      }
+    }
+    &__content {
+      width: calc(100% - 256px);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      row-gap: rwd(18, 24);
+      column-gap: rwd(32, 48);
+      line-height: 1.9;
+      width: 100%;
+
+      @include atMedium {
+        display: flex;
+        flex-direction: column;
+        padding-left: 10vw;
+
+        ul,
+        ol {
+          margin-left: 0;
+        }
+      }
+
+      &-column-1 {
+      }
+      &-column-2 {
+      }
+      &-column-callendar {
+        display: grid;
+        grid-template-columns: 60% 30%;
+        column-gap: 10%;
+        row-gap: rwd(32, 48);
+        grid-column: span 2;
+        background: $glass-block-background;
+        box-shadow: $glass-block-shadow;
+        padding: rwd(32, 48);
+        border-radius: rwd(32, 48);
+
+        @include atMedium {
+          display: flex;
+          flex-direction: column;
+          gap: 48px;
+          background: unset;
+          box-shadow: unset;
+          padding: unset;
+        }
+
+        @include atSmallMedium {
+          gap: 24px;
+        }
+      }
+
+      &-title {
+        color: $color-secondary;
+        grid-column: span 2;
+        margin-top: rwd(18, 28);
+        &.option-3 {
+          color: $color-primary;
+        }
+      }
+
+      &-text {
+      }
+
+      &-list-item {
+        display: flex;
+        align-items: flex-start;
+        & + .details-section__content-list-item {
+          margin-top: 24px;
+        }
+      }
+
+      &-list-icon {
+        min-width: rwd(16, 40);
+        max-width: rwd(16, 40);
+        // margin-top: -5px;
+        height: auto;
+        object-fit: contain;
+        margin-right: rwd(18, 24);
+      }
+
+      &-callendar-item {
+        display: grid;
+        grid-template-columns: 72px calc(100% - 72px);
+
+        @include atMedium {
+          display: flex;
+          flex-direction: column;
+        }
+        &:nth-child(1) {
+          grid-row: span 2;
+        }
+        &-title {
+          font-size: 14px;
+          color: $color-primary;
+          margin-top: 14px;
+          margin-bottom: 14px;
+
+          @include atSmallMedium {
+            margin-bottom: 0;
+            margin-top: 0px;
+          }
+        }
+        &-text {
+          font-weight: 500;
+          line-height: 1.4;
+        }
+        &-icon {
+          grid-row: span 2;
+          svg {
+            width: rwd(32, 48);
+            height: rwd(32, 48);
+
+            @include atSmallMedium {
+              width: 16px;
+              height: 16px;
+            }
+          }
+        }
+      }
+      &-dates {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        @include atMedium {
+          gap: 8px;
+        }
+      }
+
+      &-date {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 12px;
+        @include atMedium {
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+          justify-content: flex-start;
+          gap: 0px;
+          span {
+            &:nth-child(1) {
+              width: 100%;
+            }
+            &:nth-child(2) {
+              margin-right: 8px;
+            }
+          }
+        }
+
+        span {
+          &:nth-child(1) {
+            text-transform: uppercase;
+            font-size: rwd(12, 14);
+            grid-column: span 2;
+          }
+          &:nth-child(2) {
+            font-size: rwd(14, 24);
+            font-weight: 500;
+          }
+          &:nth-child(3) {
+            font-size: rwd(14, 24);
+            font-weight: 500;
+          }
+        }
+      }
+    }
+  }
+
+  .details-cta {
+    margin: 0 auto;
+    margin-top: 32px;
+    transform: translateY(48%);
+    z-index: 2;
+  }
+}

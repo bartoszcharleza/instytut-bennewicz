@@ -1,0 +1,45 @@
+.woocommerce-Input,
+.woocommerce-input-wrapper input,
+.woocommerce-input-wrapper textarea {
+  background: $glass-block-background;
+  border: $glass-block-border;
+  box-shadow: $glass-block-shadow;
+
+  padding: 16px 32px;
+  border-radius: 100px;
+  &::placeholder {
+    color: #ffffff90;
+  }
+}
+
+.woocommerce-input-wrapper input[type='checkbox'] {
+  padding: 8px;
+}
+
+.woocommerce-input-wrapper textarea {
+  border-radius: 16px;
+}
+
+.select2-selection {
+  width: 100% !important;
+  padding: 12px !important;
+  border-radius: 25px !important;
+  height: 50px !important;
+  background: $glass-block-background !important;
+  border: $glass-block-border !important;
+  box-shadow: $glass-block-shadow !important;
+  span {
+    color: white !important;
+  }
+  .select2-selection__arrow {
+    top: 12px !important;
+    right: 20px !important;
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path id="Path_17320" data-name="Path 17320" d="M12,2A10,10,0,1,1,2,12,10,10,0,0,1,12,2Zm1,10V8H11v4H8l4,4,4-4Z" transform="translate(-2 -2)" fill="%23ef9700"/></svg>');
+    background-repeat: no-repeat;
+    background-position: center;
+    font-size: 0px;
+    b {
+      opacity: 0;
+    }
+  }
+}

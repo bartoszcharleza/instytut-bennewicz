@@ -1,0 +1,22 @@
+{
+    "key": "ui_options_page_6618fb775ed7d",
+    "title": "Moje konto",
+    "active": true,
+    "menu_order": 0,
+    "page_title": "Moje konto",
+    "menu_slug": "moje-konto",
+    "parent_slug": "acf-options-opcje-globalne",
+    "advanced_configuration": 0,
+    "icon_url": "",
+    "menu_title": "",
+    "position": "",
+    "redirect": false,
+    "description": "",
+    "update_button": "Aktualizuj",
+    "updated_message": "Ustawienia zostały zaktualizowane",
+    "capability": "edit_posts",
+    "data_storage": "options",
+    "post_id": "",
+    "autoload": 0,
+    "modified": 1712913361
+}

@@ -1,0 +1,16 @@
+#breadcrumbs {
+  color: $color-secondary;
+  > span {
+    display: flex;
+    gap: rwd(12, 18);
+  }
+  > span > span {
+    color: white;
+  }
+
+  @include atMedium {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

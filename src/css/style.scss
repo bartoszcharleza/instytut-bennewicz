@@ -1,0 +1,113 @@
+@charset 'UTF-8';
+
+// 1. Configuration
+@import 'abstracts/variables';
+@import 'abstracts/mixins';
+
+// 2. Vendors
+@import 'vendor/aoe';
+@import 'vendor/viewer';
+
+// 3. Utilities
+@import 'utils/reset';
+@import 'utils/wp';
+
+// 4. Base stuff
+@import 'base/base';
+@import 'base/image';
+@import 'base/button';
+@import 'base/label';
+@import 'base/input';
+@import 'base/select';
+@import 'base/textarea';
+@import 'base/list';
+@import 'base/typography';
+@import 'base/wysiwyg-content';
+
+// 5. Layout-related sections
+@import 'layouts/container';
+@import 'layouts/main';
+@import 'layouts/header';
+@import 'layouts/footer';
+@import 'layouts/columns';
+@import 'layouts/section';
+
+// 6 .Components
+@import 'components/cookies';
+@import 'components/menu-mobile';
+@import 'components/sections';
+@import 'components/footer';
+@import 'components/social-media';
+@import 'components/contact-form';
+@import 'components/swiper';
+@import 'components/carousel';
+@import 'components/breadcrumbs';
+@import 'components/animated-shape';
+@import 'components/video-background';
+@import 'components/popup';
+@import 'components/learndash';
+@import 'components/profile-courses-list';
+@import 'components/floating-circles';
+@import 'components/reports';
+
+// 7. Page-specific styles
+@import 'pages/homepage';
+@import 'pages/single-product';
+
+// 8. ACF blocks
+@import 'acf-blocks/carousel';
+@import 'acf-blocks/hero';
+@import 'acf-blocks/icons-and-text';
+@import 'acf-blocks/text-editor';
+@import 'acf-blocks/cta-blocks';
+@import 'acf-blocks/cta-with-image';
+@import 'acf-blocks/floating-text-blocks';
+@import 'acf-blocks/knowledge-base';
+@import 'acf-blocks/newsletter';
+@import 'acf-blocks/accordion';
+@import 'acf-blocks/courses';
+@import 'acf-blocks/numbers-text-and-photo';
+@import 'acf-blocks/number-list-and-photo';
+@import 'acf-blocks/course-header';
+@import 'acf-blocks/cta-course';
+@import 'acf-blocks/image';
+@import 'acf-blocks/video';
+@import 'acf-blocks/authors';
+@import 'acf-blocks/list';
+@import 'acf-blocks/product-description';
+@import 'acf-blocks/product-details';
+@import 'acf-blocks/similar-products';
+@import 'acf-blocks/blog-post-content';
+@import 'acf-blocks/similar-posts';
+@import 'acf-blocks/contact';
+@import 'acf-blocks/login-register';
+@import 'acf-blocks/spinning-circle';
+@import 'acf-blocks/course-form';
+@import 'acf-blocks/course-details';
+@import 'acf-blocks/course-time';
+@import 'acf-blocks/text-in-columns';
+@import 'acf-blocks/course-program';
+@import 'acf-blocks/course-certificate-example';
+@import 'acf-blocks/text-icon-image';
+@import 'acf-blocks/podcast';
+@import 'acf-blocks/graduates';
+
+// 9. WOO
+@import 'woo/books';
+@import 'woo/button';
+@import 'woo/cart';
+@import 'woo/checkout';
+@import 'woo/notices';
+@import 'woo/cart-progress';
+@import 'woo/processing-overlay';
+@import 'woo/thankyou';
+@import 'woo/form-login';
+@import 'woo/myaccount';
+@import 'woo/myaccount-my-courses';
+@import 'woo/myaccount-orders';
+@import 'woo/input';
+@import 'woo/lost-reset-password';
+@import 'woo/additional-plugins';
+
+// 10. Aos
+@import 'aos/aos';

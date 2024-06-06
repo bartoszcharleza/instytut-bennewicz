@@ -1,0 +1,18 @@
+body {
+  color: #ffffffcc;
+  font-weight: $base-font-weight;
+  // background: linear-gradient(90deg, #001a61, #060e24);
+  background-color: #041442;
+  font-family: $base-font-family;
+  line-height: $base-line-height;
+  font-size: rwd(14, 16);
+
+  @include atMedium {
+    font-size: 12px;
+  }
+}
+
+hr {
+  height: 1px;
+  background-color: $base-colour;
+}

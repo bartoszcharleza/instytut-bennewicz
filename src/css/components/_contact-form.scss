@@ -1,0 +1,144 @@
+.wpcf7 {
+  .screen-reader-response {
+    display: none;
+  }
+}
+.wpcf7-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  position: relative;
+
+  &.submitting,
+  &.resetting {
+    &::after {
+      content: 'Wysyłanie...';
+      position: absolute;
+      inset: -12px;
+      background-color: #ffffff;
+      color: $base-colour;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 16px;
+    }
+  }
+
+  &.sent {
+    .wpcf7-response-output {
+      position: absolute;
+      z-index: 10;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-shadow: 1px 1px 4px #00000020;
+      font-weight: 700;
+      color: white;
+      font-size: 16px;
+      text-align: center;
+    }
+    &::after {
+      content: '';
+      position: absolute;
+      inset: -12px;
+      background: $color-primary-gradient;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 16px;
+    }
+  }
+
+  &.submitting {
+    &::after {
+      content: 'Wysyłanie...';
+      position: absolute;
+      inset: -16px;
+      background-color: #ffffff;
+      color: $base-colour;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 16px;
+    }
+  }
+
+  & input,
+  & textarea {
+    padding: rwd(8, 16) 0px;
+    border-bottom: 1px solid white;
+    width: 100%;
+
+    &::placeholder {
+      color: #ffffff80;
+    }
+  }
+
+  & textarea {
+    height: 100px;
+  }
+
+  .wpcf7-form-control-wrap {
+    width: 100%;
+    display: block;
+  }
+
+  & .cf7-column {
+    display: flex;
+    gap: 48px;
+
+    & > p {
+      width: 100%;
+    }
+  }
+
+  [data-name='acceptance'] {
+    & label {
+      display: inline;
+    }
+  }
+
+  input[type='checkbox'] {
+    background: #ffffff30;
+    margin-right: 8px;
+    width: 16px;
+    height: 16px;
+    padding: 0px;
+    border-bottom: 0px;
+    border: 2px solid white;
+
+    &:checked {
+      background: rgb(2, 0, 36);
+      background: radial-gradient(
+        circle,
+        rgba(2, 0, 36, 1) 40%,
+        rgba(255, 255, 255, 1) 40%,
+        rgba(255, 255, 255, 1) 100%
+      );
+    }
+  }
+
+  .wpcf7-submit {
+    text-transform: uppercase;
+    font-family: $headlineFontFamily;
+    transition: $transition;
+    padding: 16px 0px;
+    width: auto;
+    margin-left: auto;
+    border: none;
+    float: right;
+    cursor: pointer;
+    &:hover {
+      padding: 16px 24px;
+    }
+
+    &:disabled {
+      background-color: #ffffff;
+      color: #00000060 !important;
+    }
+  }
+  .optional {
+    display: block;
+  }
+}

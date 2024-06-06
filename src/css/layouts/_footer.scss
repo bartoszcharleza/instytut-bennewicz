@@ -1,0 +1,67 @@
+.footer {
+  position: relative;
+  &::after {
+    content: '';
+    position: absolute;
+    width: 40%;
+    height: 1px;
+    background: $color-primary-gradient;
+    top: 0;
+    right: 0;
+  }
+  .section-container {
+    padding: 0;
+    padding-bottom: rwd(64, 124);
+    padding-top: rwd(64, 124);
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+    gap: 28px;
+    max-width: 90vw;
+    font-size: rwd(12, 14);
+    @include atMedium {
+      grid-template-columns: 1fr;
+    }
+  }
+  &__author {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: rwd(32, 64);
+    color: #acc5d6;
+    @include atMedium {
+      justify-content: center;
+    }
+  }
+  &__menu {
+    display: flex;
+    gap: rwd(16, 32);
+    @include atMedium {
+      flex-direction: column;
+    }
+    ul {
+      display: flex;
+      flex-direction: row;
+      gap: rwd(16, 32);
+      @include atMedium {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+      }
+    }
+  }
+  &__docs {
+    color: #acc5d6;
+    @include atMedium {
+      justify-content: center;
+      text-align: center;
+    }
+  }
+  .social-media {
+    @include atMedium {
+      display: flex;
+      justify-content: center;
+    }
+  }
+}

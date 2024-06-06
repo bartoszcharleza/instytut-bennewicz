@@ -1,0 +1,30 @@
+section.list {
+  .video-background {
+    opacity: 0.3;
+  }
+  .checkbox_list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 96px;
+    row-gap: 18px;
+    max-width: 84%;
+    margin: 0 auto;
+
+    @include atMedium {
+      display: flex;
+      flex-direction: column;
+      max-width: 100%;
+    }
+
+    &__checkbox {
+      display: flex;
+      gap: 28px;
+      svg {
+        min-width: rwd(24, 32);
+        min-height: rwd(24, 32);
+        max-width: rwd(24, 32);
+        max-height: rwd(24, 32);
+      }
+    }
+  }
+}

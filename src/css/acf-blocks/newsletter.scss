@@ -1,0 +1,131 @@
+.newsletter {
+  padding-top: rwd(48, 96);
+  padding-bottom: rwd(48, 96);
+
+  @include atMedium {
+    padding-top: 10vw;
+    padding-bottom: 10vw;
+  }
+
+  .section-container {
+    background: $color-secondary-gradient;
+    border-radius: rwd(64, 100);
+    padding: rwd(48, 96);
+    gap: rwd(48, 55);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include atMedium {
+      padding: 10vw;
+    }
+
+    .title {
+      display: flex;
+      align-items: center;
+      gap: rwd(32, 42);
+      @include atMedium {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      svg {
+        width: rwd(48, 64);
+      }
+    }
+    .form {
+      width: 800px;
+      max-width: 100%;
+      @include atMedium {
+        .wpcf7-row > p {
+          .wpcf7-form-control-wrap {
+            text-align: left;
+          }
+          [for='gr_marketing_consent'] {
+            margin-bottom: 8px;
+            display: inline-flex;
+          }
+        }
+        .wpcf7-submit {
+          margin-left: 0;
+          cursor: pointer;
+        }
+
+        input {
+          text-align: center;
+        }
+      }
+    }
+
+    .wpcf7-row {
+      display: flex;
+      flex-direction: row;
+      gap: rwd(48, 64);
+      justify-content: center;
+      align-items: flex-start;
+
+      @include atMedium {
+        flex-direction: column;
+        gap: 12px;
+        align-items: center;
+      }
+
+      &--newsletter-acceptances {
+        p {
+        }
+      }
+    }
+
+    .wpcf7-submit {
+      color: $color-secondary;
+      padding: rwd(16, 22) rwd(48, 80);
+      border-radius: rwd(64, 100);
+      position: relative;
+      cursor: pointer;
+    }
+
+    .wpcf7-form-control-wrap {
+      text-align: center;
+    }
+
+    .btn--form {
+      &:hover {
+        input {
+          color: white;
+        }
+      }
+
+      &::after {
+        background: $color-primary-gradient;
+      }
+
+      &::before {
+        background: white;
+      }
+    }
+
+    input:not(.wpcf7-submit) {
+      color: white;
+      &::placeholder {
+        color: white;
+      }
+    }
+
+    .wpcf7-spinner {
+    }
+  }
+
+  .circle {
+    position: absolute;
+    &-1 {
+      width: 25vw;
+      top: -10vw;
+      right: -10vw;
+    }
+    &-2 {
+      width: 15vw;
+      top: 10vw;
+      left: -8vw;
+    }
+  }
+}

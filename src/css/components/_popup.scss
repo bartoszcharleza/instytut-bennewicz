@@ -1,0 +1,56 @@
+.popup {
+  visibility: hidden;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: rwd(32, 64);
+  border-radius: rwd(32, 48);
+  background-color: #041442;
+  border: $glass-block-border;
+  box-shadow: $glass-block-shadow;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  box-shadow: 0px 0px 0px 100vw #000000bb;
+  max-height: 70vh;
+  width: 900px;
+  max-width: 80vw;
+  overflow-y: auto;
+  z-index: 999;
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: $glass-block-background;
+    z-index: -1;
+  }
+
+  video {
+    border-radius: rwd(32, 48);
+  }
+
+  &-close {
+    position: absolute;
+    line-height: 1;
+    right: rwd(16, 24);
+    top: rwd(16, 24);
+    color: $color-secondary;
+    width: 32px;
+    height: 32px;
+    background-color: #ffffff20;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100px;
+    cursor: pointer;
+  }
+
+  &.is-visible {
+    display: block;
+    opacity: 1;
+    transition: opacity 0.5s ease;
+    visibility: visible;
+    z-index: 99999;
+  }
+}

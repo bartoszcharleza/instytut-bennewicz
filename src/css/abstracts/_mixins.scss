@@ -1,0 +1,70 @@
+/*
+* Sets element media query
+*/
+@mixin media($breakpoint, $type: min) {
+  @media screen and (#{$type}-width: #{$breakpoint}) {
+    @content;
+  }
+}
+
+@mixin atSmall {
+  @media (max-width: 479px) {
+    @content;
+  }
+}
+
+@mixin atSmallMedium {
+  @media (max-width: 767px) {
+    @content;
+  }
+}
+
+@mixin atMedium {
+  @media (max-width: 1119px) {
+    @content;
+  }
+}
+
+@mixin atSmallUp {
+  @media (min-width: 480px) {
+    @content;
+  }
+}
+
+@mixin atSmallMediumUp {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin atMediumUp {
+  @media (min-width: 1120px) {
+    @content;
+  }
+}
+
+@mixin atBigOnly {
+  @media (min-width: 1120px) {
+    @content;
+  }
+}
+
+@function rwd($font-min, $font-max, $screen-min: 1440, $screen-max: 1920) {
+  @if $screen-max <= $screen-min {
+    @warn "Screen max must be greater than screen min.";
+    @return null;
+  }
+
+  @return if(
+    $screen-max <= $screen-min,
+    #{$font-min}px,
+    clamp(
+      #{$font-min}px,
+      calc(
+        #{$font-min}px + #{($font-max - $font-min)} * (100vw - #{$screen-min}px) /
+          (#{$screen-max} - #{$screen-min})
+      ),
+      #{$font-max}px
+    )
+  );
+}

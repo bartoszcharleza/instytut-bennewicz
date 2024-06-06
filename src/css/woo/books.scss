@@ -1,0 +1,221 @@
+.books {
+  .section-container {
+    gap: 0px;
+    &:nth-child(1) {
+      gap: rwd(24, 38);
+      padding-bottom: rwd(48, 72);
+    }
+    &:nth-child(2) {
+      flex-direction: row;
+      padding-top: 0px !important;
+      @include atMedium {
+        flex-direction: column;
+      }
+    }
+  }
+
+  &__sidebar {
+    min-width: 350px;
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    gap: rwd(32, 48);
+    padding-right: rwd(48, 64);
+
+    @include atMedium {
+      width: 100%;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 64px;
+      padding-right: 0;
+      min-width: 0px;
+    }
+
+    .category {
+      display: flex;
+      align-items: center;
+      gap: rwd(24, 40);
+      img {
+        width: rwd(24, 32);
+      }
+      &.active {
+        color: $color-secondary;
+        position: relative;
+        img {
+          filter: invert(28%) sepia(51%) saturate(947%) hue-rotate(329deg)
+            brightness(91%) contrast(162%);
+        }
+      }
+    }
+  }
+
+  .gutenberg-content {
+    width: 75%;
+    @include atMedium {
+      order: -1;
+      width: 100%;
+    }
+  }
+
+  &__list {
+    width: 100%;
+    .products {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      column-gap: rwd(32, 64);
+      row-gap: rwd(64, 96);
+
+      @include atSmallMedium {
+        grid-template-columns: 1fr;
+      }
+
+      &::before {
+        display: none !important;
+      }
+      .book {
+        display: flex;
+        flex-direction: column;
+        align-content: start;
+        position: relative;
+
+        img {
+          grid-column: span 2;
+          aspect-ratio: 351/496;
+          object-fit: cover;
+          margin-bottom: rwd(20, 26);
+          width: 100%;
+        }
+        h3 {
+          font-size: 24px;
+          grid-column: span 2;
+          margin-bottom: rwd(8, 12);
+        }
+        &__author {
+          grid-column: span 2;
+          margin-top: rwd(8, 12);
+          margin-bottom: rwd(8, 12);
+        }
+
+        &__description {
+          grid-column: span 2;
+          margin-top: rwd(8, 12);
+          margin-bottom: rwd(12, 18);
+          color: #dde9f1;
+          max-width: 80%;
+        }
+
+        &__details {
+          margin-top: auto;
+          display: flex;
+          justify-content: space-between;
+          width: 100%;
+        }
+
+        &__price {
+          font-size: rwd(24, 36);
+          font-weight: 600;
+          color: $color-secondary;
+          align-self: center;
+          display: flex;
+          align-items: center;
+          bdi {
+            display: flex;
+            align-items: center;
+            span {
+              font-size: rwd(14, 18);
+              font-weight: 400;
+            }
+          }
+          del {
+            font-size: rwd(14, 18);
+            color: #2754c9;
+            margin-left: 20px;
+          }
+        }
+        &__add_to_cart {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-end;
+        }
+
+        .btn {
+          margin-top: rwd(8, 12);
+          grid-column: span 2;
+        }
+
+        &--premiere {
+          img {
+            border: 5px solid $color-primary;
+            padding: 8px;
+          }
+        }
+
+        &__tags {
+          display: flex;
+          gap: rwd(4, 12);
+          position: absolute;
+          left: 50%;
+          transform: translateX(-50%);
+          top: 0;
+          margin-top: -10px;
+        }
+
+        &__bestseller-tag {
+          font-size: rwd(12, 14);
+          font-weight: 600;
+          text-transform: uppercase;
+          color: white;
+          background: $color-secondary-gradient;
+          padding: rwd(1, 4) rwd(8, 16);
+          border-radius: 100px;
+          z-index: 3;
+        }
+
+        &__sale-tag {
+          font-size: rwd(12, 14);
+          font-weight: 600;
+          text-transform: uppercase;
+          color: white;
+          background-color: #ee0808;
+          padding: rwd(1, 4) rwd(8, 16);
+          border-radius: 100px;
+        }
+
+        &__premiere-tag {
+          font-size: rwd(12, 14);
+          font-weight: 600;
+          text-transform: uppercase;
+          color: white;
+          background-color: #1ad2d6;
+          padding: rwd(1, 4) rwd(8, 16);
+          border-radius: 100px;
+          margin-left: auto;
+        }
+      }
+    }
+  }
+
+  .circle {
+    position: absolute;
+    &-1 {
+      width: 12vw;
+      top: 11vw;
+      right: 5vw;
+    }
+    &-2 {
+      width: 32vw;
+      left: -16vw;
+      top: 30%;
+    }
+    &-3 {
+      width: 25vw;
+      right: -14vw;
+      top: 60%;
+    }
+    &-4 {
+      width: 80vw;
+      left: 0;
+      top: 40%;
+    }
+  }
+}

@@ -1,0 +1,38 @@
+.text-in-columns {
+  .video-background {
+    opacity: 0.3;
+  }
+  .section-container > .wysiwyg-content {
+    width: 84%;
+    margin: 0 auto;
+    @include atMedium {
+      width: 100%;
+      margin: none;
+    }
+  }
+  .content {
+    width: 84%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: rwd(64, 96);
+    line-height: 1.8;
+    @include atMedium {
+      width: 100%;
+      grid-template-columns: 1fr;
+    }
+
+    &__column-1 {
+      border-left: 3px solid $color-secondary;
+      padding-left: rwd(32, 48);
+    }
+
+    &__column-2 {
+      border-left: 3px solid $color-secondary;
+      padding-left: rwd(32, 48);
+    }
+  }
+  .cta {
+    margin: 0 auto;
+  }
+}

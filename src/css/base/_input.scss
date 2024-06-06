@@ -1,0 +1,60 @@
+input {
+  font-family: $headlineFontFamily;
+  line-height: 1.4;
+  [type='text'] {
+  }
+
+  [type='email'] {
+  }
+
+  [type='tel'] {
+  }
+
+  &[type='radio'] {
+    padding: 4px;
+    border: 2px solid white;
+    border-radius: 50%;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #ffffff40;
+    }
+
+    &:checked {
+      background: $color-primary-gradient;
+      color: #fff;
+    }
+  }
+
+  &[type='checkbox'] {
+    display: inline-block !important;
+    cursor: pointer;
+    width: 12px;
+    height: 12px;
+    border: 2px solid white;
+
+    &:hover {
+      background-color: #ffffff40;
+    }
+
+    &:checked {
+      background: $color-primary-gradient;
+      color: #fff;
+    }
+  }
+
+  [type='button'] {
+  }
+
+  [type='submit'] {
+  }
+
+  [type='file'] {
+  }
+
+  [type='time'] {
+  }
+
+  [type='date'] {
+  }
+}

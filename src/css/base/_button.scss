@@ -1,0 +1,289 @@
+.btn--primary,
+.btn--secondary,
+.btn--tertiary,
+.btn--black,
+.btn--white,
+.btn--form,
+.menu-button {
+  position: relative;
+  border-radius: 100px;
+  overflow: hidden;
+  width: fit-content;
+
+  &:hover {
+    &::after {
+      transform: translateX(0%);
+      opacity: 1;
+    }
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    transform: translateX(-105%);
+    transition: 0.9s;
+    border-radius: 100px;
+    opacity: 1;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    z-index: -2;
+    inset: 0;
+  }
+}
+
+.btn {
+  text-transform: uppercase;
+  font-family: $headlineFontFamily;
+  transition: $transition;
+  border-radius: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+
+  &--small {
+    padding: rwd(8, 14) rwd(24, 32) !important;
+  }
+
+  &--primary {
+    width: fit-content;
+    display: flex;
+    gap: 14px;
+    padding: rwd(12, 20) rwd(32, 48);
+    transition: $transition;
+    // background: $color-primary-gradient;
+    color: white;
+    font-size: rwd(12, 15);
+    font-weight: 600;
+    text-align: center;
+    box-shadow: 0px 10px 20px -5px #1ad2d6aa;
+
+    &:hover {
+      box-shadow: 0px 10px 20px -5px #ef9700aa;
+    }
+
+    &::after {
+      background: $color-secondary-gradient;
+    }
+
+    &::before {
+      background: $color-primary-gradient;
+    }
+  }
+
+  &--secondary {
+    width: fit-content;
+    display: flex;
+    gap: 14px;
+    padding: rwd(12, 20) rwd(32, 48);
+    transition: $transition;
+    color: white;
+    font-size: rwd(12, 15);
+    font-weight: 600;
+    text-align: center;
+    box-shadow: 0px 10px 20px -5px #ef9700aa;
+
+    &:hover {
+      box-shadow: 0px 10px 20px -5px #1ad2d6aa;
+    }
+
+    &::after {
+      background: $color-primary-gradient;
+    }
+
+    &::before {
+      background: $color-secondary-gradient;
+    }
+  }
+
+  &--dark {
+    width: fit-content;
+    display: flex;
+    gap: 14px;
+    padding: rwd(12, 20) rwd(32, 48);
+    transition: $transition;
+    background-color: #24459b;
+    color: white;
+    font-size: rwd(12, 15);
+    font-weight: 600;
+    text-align: center;
+
+    &:hover {
+      &::after {
+        background: $color-primary-gradient;
+      }
+    }
+
+    &::before {
+      background-color: #24459b;
+    }
+  }
+
+  &--tertiary {
+    width: fit-content;
+    display: flex;
+    gap: 14px;
+    padding: rwd(12, 20) rwd(32, 48);
+    transition: $transition;
+    color: $color-secondary;
+    font-size: rwd(12, 15);
+    font-weight: 600;
+    border: 2px solid $color-secondary;
+    text-align: center;
+
+    &:hover {
+      box-shadow: 0px 10px 20px -5px #ef9700aa;
+      color: white;
+    }
+
+    &::after {
+      background: $color-secondary-gradient;
+    }
+  }
+
+  &--dark-outline {
+    width: fit-content;
+    display: flex;
+    gap: 14px;
+    padding: rwd(12, 24) rwd(24, 48);
+    transition: $transition;
+    color: black;
+    font-size: rwd(12, 15);
+    font-weight: 600;
+    border: 2px solid black;
+    text-align: center;
+
+    &:hover {
+      background: $color-secondary-gradient;
+      color: white;
+    }
+  }
+
+  &--white {
+    width: fit-content;
+    display: flex;
+    gap: 14px;
+    padding: rwd(12, 24) rwd(24, 48);
+    transition: $transition;
+    color: black;
+    font-size: rwd(12, 15);
+    font-weight: 600;
+    text-align: center;
+
+    &:hover {
+      box-shadow: 0px 10px 20px -5px #ef9700aa;
+    }
+
+    &::after {
+      background: $color-primary-gradient;
+    }
+
+    &::before {
+      background-color: white;
+    }
+  }
+
+  &--black {
+    width: fit-content;
+    display: flex;
+    gap: 14px;
+    padding: rwd(12, 24) rwd(24, 48);
+    transition: $transition;
+    color: white;
+    font-size: rwd(12, 15);
+    font-weight: 600;
+    text-align: center;
+
+    &:hover {
+    }
+
+    &::after {
+      background: $color-primary-gradient;
+    }
+
+    &::before {
+      background-color: #060e24;
+    }
+  }
+
+  &--wide {
+    padding-left: rwd(48, 96);
+    padding-right: rwd(48, 96);
+  }
+
+  &--medium {
+    padding: rwd(8, 12) rwd(16, 24) !important;
+  }
+
+  &--arrow {
+    width: fit-content;
+    display: flex;
+    gap: 14px;
+    transition: $transition;
+    color: $color-secondary;
+    font-size: rwd(12, 15);
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.3s;
+
+    &::after {
+      content: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="40.541" height="40.541" viewBox="0 0 40.541 40.541"><path id="Path_18119" data-name="Path 18119" d="M16.333,2A14.333,14.333,0,1,1,2,16.333,14.338,14.338,0,0,1,16.333,2Zm0,25.8A11.467,11.467,0,1,0,4.867,16.333,11.463,11.463,0,0,0,16.333,27.8Zm1.433-11.467h4.3l-5.733,5.733L10.6,16.333h4.3V10.6h2.867Z" transform="translate(-2.828 20.271) rotate(-45)" fill="%23ef9700"/></svg>');
+      margin-left: 4px;
+      transition: 0.3s;
+      background: none;
+    }
+
+    &::before {
+      display: none;
+    }
+
+    &:hover {
+      &::after {
+        margin-left: 8px;
+      }
+    }
+  }
+
+  &--outside-border-dark-blue-wrap,
+  &--outside-border-secondary-wrap,
+  &--outside-border-primary-wrap {
+    width: fit-content;
+    padding: rwd(6, 10);
+    border-radius: 100px;
+  }
+
+  &--outside-border-dark-blue-wrap {
+    border: 2px dashed #24459b;
+  }
+
+  &--outside-border-secondary-wrap {
+    border: 2px dashed $color-secondary;
+  }
+
+  &--outside-border-primary-wrap {
+    border: 2px dashed $color-primary;
+  }
+}
+
+.menu-button {
+  &:hover {
+  }
+
+  &::after {
+    background: $color-primary-gradient;
+  }
+
+  &::before {
+    background: $color-secondary-gradient;
+  }
+}

@@ -1,0 +1,141 @@
+.wysiwyg-content {
+  width: 100%;
+  > *:first-child {
+    margin-top: 0;
+  }
+
+  > *:last-child {
+    margin-bottom: 0;
+  }
+  width: 100%;
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin-top: 0.6em;
+    margin-bottom: 0.2em;
+    line-height: 1.35em;
+  }
+
+  p {
+    margin-top: 1.8em;
+    margin-bottom: 1.8em;
+  }
+
+  ul,
+  ol {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: 2em;
+  }
+
+  li {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    list-style: none;
+    &::before {
+      content: '●';
+      font-weight: 700;
+      color: $color-secondary;
+      margin-right: 0.5em;
+      margin-left: -1em;
+    }
+    > ul > li {
+      &::before {
+        content: '○';
+        font-weight: 700;
+        color: $color-secondary;
+        margin-right: 0.5em;
+        margin-left: -1em;
+      }
+    }
+  }
+
+  a {
+    margin-top: 2.5em;
+    margin-bottom: 2.5em;
+  }
+
+  .text-- {
+    &s {
+      font-size: 14px;
+    }
+    &m {
+      font-size: 16px;
+    }
+    &l {
+      font-size: 18px;
+    }
+  }
+
+  .quote {
+    display: flex;
+    gap: rwd(32, 48);
+    font-weight: 400;
+
+    @include atMedium {
+      text-align: center;
+    }
+    &::before {
+      content: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="110" height="84.372" viewBox="0 0 110 84.372"><path id="Path_18190" data-name="Path 18190" d="M103.4,12.773c6.355,6.747,9.768,14.319,9.768,26.593,0,21.588-15.154,40.941-37.2,50.506l-5.507-8.5C91.035,70.241,95.056,55.8,96.663,46.7a22.118,22.118,0,0,1-11.9,1.922A21.592,21.592,0,0,1,86.45,5.5,23.885,23.885,0,0,1,103.4,12.773Zm-61.69,0c6.355,6.747,9.768,14.319,9.768,26.593,0,21.588-15.154,40.941-37.2,50.506l-5.507-8.5C29.345,70.241,33.366,55.8,34.973,46.7a22.117,22.117,0,0,1-11.9,1.922A21.592,21.592,0,0,1,24.76,5.5,23.884,23.884,0,0,1,41.711,12.773Z" transform="translate(-3.169 -5.5)" fill="%231ad2d6"/></svg>');
+      display: block;
+
+      @include atMedium {
+        display: none;
+      }
+    }
+  }
+
+  .line-left {
+    display: flex;
+    white-space: nowrap;
+    align-items: center;
+    gap: 0.4em;
+    @include atMedium {
+      white-space: unset;
+      display: unset;
+    }
+
+    &::before {
+      content: '';
+      width: 100%;
+      height: 1px;
+      background: $color-secondary-gradient;
+      display: block;
+      margin-right: rwd(32, 48);
+      @include atMedium {
+        display: none;
+      }
+    }
+  }
+
+  .line-left-right {
+    display: flex;
+    white-space: nowrap;
+    align-items: center;
+    gap: rwd(32, 48);
+    @include atMedium {
+      white-space: unset;
+      flex-direction: column;
+    }
+    svg {
+      min-width: rwd(64, 96);
+    }
+    &::before {
+      content: '';
+      width: 100%;
+      height: 1px;
+      background: $color-primary-gradient;
+      display: block;
+    }
+    &::after {
+      content: '';
+      width: 100%;
+      height: 1px;
+      background: $color-primary-gradient;
+      display: block;
+    }
+  }
+}

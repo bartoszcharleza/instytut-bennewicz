@@ -1,0 +1,43 @@
+.woocommerce {
+  &-info,
+  &-message,
+  &-error {
+    width: 100%;
+    border-radius: 25px;
+    background: $glass-block-background;
+    border: $glass-block-border;
+    box-shadow: $glass-block-shadow;
+    color: white;
+    padding: rwd(8, 20) rwd(24, 32);
+
+    .client-panel-content & {
+      color: $base-colour;
+      background: $color-gray;
+      border: 1px solid #00000010;
+    }
+
+    @include atSmallMedium {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 12px;
+      text-align: center;
+    }
+
+    &::before {
+      display: none;
+    }
+
+    a {
+      text-decoration: underline;
+    }
+  }
+
+  &-error {
+    border: 2px solid red;
+  }
+  .button {
+    border-radius: 100px !important;
+  }
+}

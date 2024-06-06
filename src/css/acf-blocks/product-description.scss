@@ -1,0 +1,98 @@
+.product-description {
+  .section-container {
+    display: grid;
+    gap: rwd(64, 80) !important;
+    grid-template-columns: repeat(5, minmax(0px, 1fr));
+    @include atMedium {
+      display: flex;
+      flex-direction: column;
+      gap: 0px !important;
+    }
+  }
+
+  .photo-wrap {
+    border: 5px solid $color-primary;
+    padding: rwd(16, 20);
+    margin-bottom: rwd(32, 48);
+    grid-column: span 2;
+    @include atMedium {
+      grid-column: 1;
+    }
+    img {
+      width: 100%;
+    }
+  }
+
+  .product-content {
+    grid-column: span 3;
+    @include atMedium {
+      grid-column: 1;
+    }
+    &__title {
+    }
+    &__author {
+      font-weight: 400;
+      margin-top: rwd(16, 20);
+      margin-bottom: rwd(12, 18);
+    }
+    &__text {
+      color: #dde9f1;
+    }
+
+    &__details {
+      width: 400px;
+      max-width: 100%;
+      margin-top: rwd(24, 32);
+
+      @include atMedium {
+        width: auto;
+        max-width: 400px;
+      }
+      ul {
+        display: flex;
+        flex-direction: column;
+        gap: rwd(12, 16);
+      }
+      li {
+        display: flex;
+        flex-direction: row;
+        gap: 16px;
+        justify-content: space-between;
+        width: 100%;
+        span {
+          &:nth-child(1) {
+            color: #dde9f1;
+            font-weight: 400;
+            width: 50%;
+          }
+          &:nth-child(2) {
+            font-weight: 600;
+            width: 50%;
+          }
+        }
+      }
+    }
+
+    &__price {
+      margin-top: rwd(32, 48);
+      margin-bottom: rwd(32, 48);
+      font-weight: 600;
+      display: flex;
+      gap: rwd(24, 36);
+      align-items: center;
+
+      bdi {
+        display: flex;
+        align-items: center;
+        font-size: rwd(32, 48);
+        font-weight: 600;
+        color: $color-secondary;
+        align-self: center;
+        span {
+          font-size: rwd(16, 18);
+          font-weight: 400;
+        }
+      }
+    }
+  }
+}

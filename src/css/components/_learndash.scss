@@ -1,0 +1,404 @@
+body {
+  .learndash-wrapper {
+    background: transparent !important;
+    color: #0a2e4e;
+    p,
+    a:not(.btn):not(.ld-button),
+    ul,
+    li,
+    .ld-table-list a.ld-table-list-item-preview,
+    .ld-item-title,
+    .ld-course-navigation .ld-lesson-item-preview .ld-lesson-title,
+    .ld-item-list .ld-item-list-item .ld-item-name,
+    .ld-focus .ld-focus-header .ld-user-menu .ld-text,
+    .wpProQuiz_points,
+    .wpProQuiz_content .wpProQuiz_response,
+    .ld-table-list .ld-table-list-item .ld-table-list-title a,
+    .ld-icon-assignment:before,
+    .ld-status-icon .ld-icon:before,
+    .ld-table-list
+      .ld-table-list-item-expanded
+      .ld-table-list
+      .ld-table-list-header,
+    .wpProQuiz_graded_points,
+    .ld-table-list .ld-table-list-item-preview a {
+      color: #0a2e4e;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-weight: 400 !important;
+      color: #0a2e4e !important;
+
+      &.cta-blocks__title {
+        color: white !important;
+      }
+    }
+
+    .ld-status-complete.ld-status-icon .ld-icon:before {
+      color: white;
+      font-size: 8px;
+    }
+
+    .ld-focus .ld-focus-header .ld-mobile-nav span {
+      // background-color: #ffffffcc !important;
+    }
+
+    .ld-secondary-background,
+    .ld-progress .ld-progress-bar .ld-progress-bar-percentage {
+      background: $color-primary-gradient !important;
+    }
+
+    .ld-user-menu #quiz_continue_link,
+    .ld-secondary-background,
+    .learndash_mark_complete_button,
+    #learndash_mark_complete_button,
+    .ld-status-complete,
+    .ld-alert-success .ld-button,
+    .ld-alert-success .ld-alert-icon,
+    .ld-focus .ld-focus-sidebar .ld-focus-sidebar-trigger .ld-icon {
+      background: $color-primary-gradient;
+      background-color: transparent;
+    }
+
+    .ld-user-menu {
+      .btn {
+        margin: 12px;
+        white-space: nowrap;
+        color: white;
+      }
+    }
+
+    .ld-item-list .ld-item-list-item .ld-item-list-item-expanded:before,
+    .ld-focus
+      .ld-focus-sidebar
+      .ld-course-navigation
+      .ld-topic-list.ld-table-list:before,
+    .ld-course-navigation .ld-lesson-item-expanded:before,
+    .ld-profile-summary,
+    #ld-profile button.ld-icon-search.ld-icon,
+    .wpProQuiz_modal_backdrop,
+    .wpProQuiz_content .wpProQuiz_header,
+    .ld-table-list .ld-table-list-item-expanded .ld-table-list:before,
+    .ld-text.ld-user-welcome-text,
+    .wpProQuiz_certificate {
+      display: none !important;
+    }
+
+    .ld-table-list-items .ld-status-icon {
+      margin-right: 12px;
+
+      @include atSmallMedium {
+        margin-right: 0;
+        transform: translateX(-10px);
+      }
+    }
+
+    .ld-table-list.ld-no-pagination,
+    .ld-table-list
+      .ld-table-list-item-expanded
+      .ld-table-list
+      .ld-table-list-item:first-child {
+      border: 0px !important;
+    }
+
+    .ld-status-icon {
+      width: 1em;
+      height: 1em;
+      flex-basis: auto;
+      span {
+        font-size: 0.75em !important;
+      }
+    }
+
+    .wpProQuiz_question_text a {
+      text-decoration: underline;
+      font-weight: bold;
+    }
+
+    .ld-topic-list.ld-table-list
+      .ld-table-list-item
+      .ld-table-list-item-preview
+      .ld-status-icon {
+      margin-top: 0.25em;
+    }
+
+    .ld-expand-button,
+    #learndash_mark_complete_button,
+    .learndash_mark_complete_button,
+    .ld-button {
+      font-size: 14px !important;
+      font-weight: 500;
+      border-radius: 100px;
+    }
+
+    .wp-block-embed__wrapper {
+      iframe {
+        width: 100%;
+        aspect-ratio: 16/9;
+        height: unset;
+      }
+    }
+
+    .learndash-wrapper .ld-content-actions .ld-content-action {
+      flex-basis: unset;
+    }
+
+    #ld-profile .ld-section-heading .ld-expand-button {
+      max-width: 100% !important;
+    }
+
+    .ld-tabs-content {
+      .section {
+        .section-container {
+          width: 100%;
+          padding-top: 32px !important;
+          padding-bottom: 32px !important;
+        }
+      }
+
+      a:not(.btn):not(.ld-button) {
+        text-decoration: underline;
+      }
+    }
+
+    @media only screen and (max-width: 640px) {
+      .ld-item-list
+        .ld-item-list-item
+        .ld-item-list-item-preview
+        .ld-item-details {
+        margin-left: 1em;
+      }
+
+      .ld-expand-button .ld-text {
+        padding: 1em;
+      }
+    }
+
+    .wpProQuiz_certificate {
+      padding: rwd(32, 48);
+      border-radius: rwd(24, 50);
+    }
+  }
+
+  .learndash_post_sfwd-courses {
+    width: 100%;
+  }
+
+  .wpProQuiz_content
+    .wpProQuiz_questionListItem.wpProQuiz_answerCorrectIncomplete
+    label {
+    border: 2px solid #e2e7ed !important;
+  }
+}
+
+body.ld-in-focus-mode,
+body.ld-in-focus-mode .learndash-wrapper,
+body .learndash-wrapper .ld-focus-header,
+.learndash-wrapper .ld-focus .ld-focus-header .ld-brand-logo,
+.learndash-wrapper .ld-focus .ld-focus-sidebar,
+.learndash-wrapper
+  .ld-focus
+  .ld-focus-sidebar
+  .ld-course-navigation
+  .ld-lesson-item,
+.wpProQuiz_modal_window,
+#wpProQuiz_user_content table.wp-list-table tbody tr.categoryTr th,
+#wpProQuiz_user_content .wpProQuiz_questionList,
+#wpProQuiz_user_content .wpProQuiz_sortable {
+  // background: #041442 !important;
+}
+
+#wpProQuiz_user_content table.wp-list-table tfoot tr th {
+  // background: #ffffff10 !important;
+}
+
+.learndash-wrapper
+  .ld-button:hover:not(.learndash-link-previous-incomplete):not(
+    .ld-button-transparent
+  ),
+#learndash-tooltips .ld-tooltip:after,
+#learndash-tooltips .ld-tooltip,
+.learndash-wrapper .ld-primary-background,
+.learndash-wrapper .btn-join,
+.learndash-wrapper #btn-join,
+.learndash-wrapper
+  .ld-button:not(.ld-button-reverse):not(
+    .learndash-link-previous-incomplete
+  ):not(.ld-button-transparent),
+.learndash-wrapper .ld-expand-button,
+.learndash-wrapper
+  .wpProQuiz_content
+  .wpProQuiz_button:not(.wpProQuiz_button_reShowQuestion):not(
+    .wpProQuiz_button_restartQuiz
+  ),
+.learndash-wrapper .wpProQuiz_content .wpProQuiz_button2,
+.learndash-wrapper .ld-focus .ld-focus-sidebar .ld-course-navigation-heading,
+.learndash-wrapper .ld-focus-comments .form-submit #submit,
+.learndash-wrapper .ld-login-modal input[type='submit'],
+.learndash-wrapper .ld-login-modal .ld-login-modal-register,
+.learndash-wrapper .wpProQuiz_content .wpProQuiz_certificate a.btn-blue,
+.learndash-wrapper
+  .ld-focus
+  .ld-focus-header
+  .ld-user-menu
+  .ld-user-menu-items
+  a,
+#wpProQuiz_user_content table.wp-list-table thead th,
+#wpProQuiz_overlay_close,
+.learndash-wrapper .ld-expand-button.ld-button-alternate .ld-icon {
+  background: $color-secondary-gradient;
+  background-color: transparent;
+}
+
+.wpProQuiz_modal_backdrop {
+  filter: blur(100px);
+}
+
+#wpProQuiz_user_content .wpProQuiz_sortable,
+#wpProQuiz_user_content .wpProQuiz_questionList > li,
+#wpProQuiz_user_content .wpProQuiz_questionList {
+  border-radius: 8px;
+}
+
+#wpProQuiz_user_content .wpProQuiz_questionList {
+  // border-color: #ffffff40 !important;
+}
+
+#learndash-registration-wrapper {
+  margin-top: rwd(148, 180) !important;
+  width: 1626px;
+  max-width: 80vw;
+  border-radius: rwd(64, 100);
+  padding: rwd(48, 96);
+  // background: $glass-block-background;
+  // border: $glass-block-border;
+  // box-shadow: $glass-block-shadow;
+  @include atSmallMedium {
+    gap: 5vw;
+    padding-bottom: 10vw;
+    max-width: 85vw;
+  }
+
+  .button {
+    text-transform: uppercase;
+    font-family: $headlineFontFamily;
+    transition: $transition;
+    border-radius: 100px !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    width: fit-content;
+    display: flex;
+    gap: 14px;
+    padding: rwd(12, 20) rwd(32, 48);
+    transition: $transition;
+    color: white;
+    font-size: rwd(12, 15);
+    font-weight: 600;
+    text-align: center;
+    box-shadow: 0px 10px 20px -5px #ef9700aa;
+    background: $color-secondary-gradient;
+    border: 0px solid white !important;
+  }
+}
+
+.ultp-dashboard-toolbar,
+.ultp-dashboard-quiz__score {
+  display: none !important;
+}
+
+.ultp-dashboard-course__details,
+.ultp-dashboard-btn {
+  background-color: $color-gray;
+}
+
+.ultp-dashboard-lesson__status-circle {
+  background-color: transparent !important;
+  background: $color-secondary-gradient !important;
+}
+
+.ultp-dashboard-lesson--not-completed .ultp-dashboard-lesson__status-circle {
+  filter: grayscale(1);
+  opacity: 0.2;
+}
+
+.ultp-dashboard-course__content {
+  padding-left: 0 !important;
+}
+
+.ultp-dashboard-section__header-title,
+.ultp-dashboard-quizzes__header-title {
+  font-weight: 600;
+  background-color: $color-gray;
+}
+
+.ultp-dashboard-course__row .ultp-dashboard-course__toggle-btn {
+  color: white !important;
+}
+
+.ultp-dashboard-course__toggle-btn:before,
+.ultp-dashboard-quizzes__header-toggle-btn:before,
+.ultp-dashboard-lesson__toggle-btn:before,
+.ultp-dashboard-course__name {
+  color: $color-secondary !important;
+}
+
+.ultp-dashboard-course__name {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.ultp-dashboard-course__details {
+  padding: rwd(24, 36);
+
+  @include atSmallMedium {
+    padding: 12px;
+  }
+}
+
+.ultp-dashboard-lesson__status-circle,
+.ultp-dashboard-btn {
+  border: 0px solid !important;
+}
+
+.ultp-dashboard-btn {
+  border-radius: 100px;
+}
+
+.ultp-dashboard-btn--certificate {
+  display: none;
+}
+
+.ultp-dashboard-box {
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.learndash-course {
+  background-color: white;
+  border-radius: rwd(24, 50);
+  z-index: 2;
+  .heading {
+    color: $base-colour;
+  }
+
+  .text-in-columns .section-container > .wysiwyg-content,
+  .text-in-columns .content,
+  .text-editor .medium .wysiwyg-content {
+    width: 100%;
+  }
+}
+.resume-timer {
+  background: $color-primary;
+  padding: 12px 32px;
+  border-radius: 100px;
+}

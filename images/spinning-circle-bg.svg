@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="871" height="943" viewBox="0 0 871 943">
+  <defs>
+    <filter id="Ellipse_453" x="274.5" y="330.5" width="322" height="322" filterUnits="userSpaceOnUse">
+      <feOffset dy="20" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="49.5" result="blur"/>
+      <feFlood flood-color="#ffbb61"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="spinning-circle-bg" transform="translate(-314 -170)">
+    <g id="Group_2192" data-name="Group 2192">
+      <g id="Ellipse_447" data-name="Ellipse 447" transform="translate(513 170)" fill="none" stroke="#35bbba" stroke-width="1">
+        <circle cx="236" cy="236" r="236" stroke="none"/>
+        <circle cx="236" cy="236" r="235.5" fill="none"/>
+      </g>
+      <g id="Ellipse_448" data-name="Ellipse 448" transform="translate(514 641)" fill="none" stroke="#35bbba" stroke-width="1">
+        <ellipse cx="236.5" cy="236" rx="236.5" ry="236" stroke="none"/>
+        <ellipse cx="236.5" cy="236" rx="236" ry="235.5" fill="none"/>
+      </g>
+      <g id="Ellipse_449" data-name="Ellipse 449" transform="translate(314 530)" fill="none" stroke="#35bbba" stroke-width="1">
+        <circle cx="236" cy="236" r="236" stroke="none"/>
+        <circle cx="236" cy="236" r="235.5" fill="none"/>
+      </g>
+      <g id="Ellipse_450" data-name="Ellipse 450" transform="translate(314 280)" fill="none" stroke="#35bbba" stroke-width="1">
+        <ellipse cx="236" cy="236.5" rx="236" ry="236.5" stroke="none"/>
+        <ellipse cx="236" cy="236.5" rx="235.5" ry="236" fill="none"/>
+      </g>
+      <g id="Ellipse_451" data-name="Ellipse 451" transform="translate(713 280)" fill="none" stroke="#35bbba" stroke-width="1">
+        <circle cx="236" cy="236" r="236" stroke="none"/>
+        <circle cx="236" cy="236" r="235.5" fill="none"/>
+      </g>
+      <g id="Ellipse_452" data-name="Ellipse 452" transform="translate(713 530)" fill="none" stroke="#35bbba" stroke-width="1">
+        <circle cx="236" cy="236" r="236" stroke="none"/>
+        <circle cx="236" cy="236" r="235.5" fill="none"/>
+      </g>
+    </g>
+    <g transform="matrix(1, 0, 0, 1, 314, 170)" filter="url(#Ellipse_453)">
+      <circle id="Ellipse_453-2" data-name="Ellipse 453" cx="12.5" cy="12.5" r="12.5" transform="translate(423 459)" fill="#ef9700"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,58 @@
+.similar-products {
+  @include atMedium {
+    margin-bottom: 124px;
+  }
+  .swiper-container {
+    overflow: hidden;
+  }
+  .post {
+    display: flex;
+    flex-direction: row;
+    gap: 10%;
+    align-items: center;
+
+    img {
+      aspect-ratio: 224/310;
+      object-fit: cover;
+      width: 30%;
+    }
+
+    &__content {
+      width: 60%;
+      display: flex;
+      flex-direction: column;
+      gap: rwd(12, 24);
+    }
+  }
+
+  .swiper-buttons {
+    position: relative;
+    position: absolute;
+    bottom: -48px;
+    right: 50%;
+    transform: translateX(50%);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    top: unset;
+    left: unset;
+  }
+  .swiper-button-prev-4 {
+    position: relative;
+    all: unset;
+    cursor: pointer;
+  }
+
+  .swiper-button-next-4 {
+    position: relative;
+    all: unset;
+    cursor: pointer;
+  }
+
+  .swiper-buttons-line {
+    width: 50px;
+    margin: 0 24px;
+    height: 1px;
+    background: $color-secondary-gradient;
+  }
+}

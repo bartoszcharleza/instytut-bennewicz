@@ -1,0 +1,106 @@
+.course-time {
+  .content {
+    width: 100%;
+    border-radius: rwd(64, 100);
+    padding: rwd(32, 64);
+    background: $glass-block-background;
+    border: $glass-block-border;
+    box-shadow: 60px 60px 200px -10px #00000080;
+    display: flex;
+    flex-direction: row;
+
+    @include atMedium {
+      flex-direction: column;
+      padding: 48px 24px;
+    }
+
+    &__icon {
+      min-width: rwd(48, 64);
+      margin-right: rwd(48, 64);
+
+      @include atMedium {
+        width: 48px;
+        height: 48px;
+      }
+    }
+
+    &__details {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+      gap: 18px;
+    }
+
+    &__title {
+      display: flex;
+      align-items: center;
+
+      @include atMedium {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      svg {
+        width: rwd(32, 48);
+      }
+      h2 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 32px;
+
+        @include atMedium {
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 12px;
+          margin-top: 32px;
+        }
+
+        span {
+          font-size: rwd(16, 18);
+          font-weight: 400;
+        }
+      }
+    }
+
+    &__list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      line-height: 1.6;
+      column-gap: rwd(32, 48);
+      row-gap: rwd(18, 24);
+
+      @include atMedium {
+        grid-template-columns: 1fr;
+      }
+
+      &-item {
+        display: grid;
+        grid-template-columns: minmax(0px, 48px) minmax(0px, calc(100% - 48px));
+        align-content: start;
+
+        @include atMedium {
+          grid-template-columns: minmax(0px, 32px) minmax(
+              0px,
+              calc(100% - 32px)
+            );
+        }
+
+        &-icon {
+          grid-row: span 2;
+          width: rwd(18, 32);
+        }
+
+        &-title {
+          color: $color-primary;
+          margin-bottom: 6px;
+          margin-top: 8px;
+        }
+      }
+    }
+    &__cta {
+      margin: 0 auto;
+    }
+  }
+}

@@ -1,0 +1,18 @@
+.thankyou-section {
+  .content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    svg {
+      margin-bottom: 38px;
+    }
+    h1 {
+      margin-bottom: 18px;
+    }
+    p {
+      margin-bottom: 38px;
+    }
+  }
+}

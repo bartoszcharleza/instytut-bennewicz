@@ -1,0 +1,57 @@
+.cart-progress {
+  .section-container {
+    gap: rwd(32, 48);
+    padding-bottom: 0;
+  }
+  .section-title {
+    width: 100%;
+    text-align: center;
+  }
+  .progress {
+    display: flex;
+    width: 100%;
+    max-width: 57vw;
+    margin: 0 auto;
+
+    @include atMedium {
+      display: none;
+    }
+    &__item {
+      width: auto;
+      &-1 {
+        text-align: left;
+      }
+      &-2 {
+        text-align: center;
+      }
+      &-3 {
+        text-align: right;
+      }
+      &-number {
+        font-size: rwd(18, 24);
+        font-weight: 600;
+        margin-bottom: rwd(6, 12);
+        color: #81a3bf;
+      }
+      &-title {
+        white-space: nowrap;
+        color: #81a3bf;
+      }
+
+      &.active {
+        .progress__item-number {
+          color: $color-secondary;
+        }
+        .progress__item-title {
+          color: white;
+        }
+      }
+    }
+    &__separator {
+      margin-top: rwd(8, 12);
+      height: 1px;
+      background-color: #81a3bf;
+      width: 50%;
+    }
+  }
+}

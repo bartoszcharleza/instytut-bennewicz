@@ -1,0 +1,39 @@
+.text-editor {
+
+  .video-background{
+    opacity: .2;
+  }
+  .section-container {
+    z-index: 4;
+    display: flex;
+    flex-direction: row;
+    @include atMedium {
+      flex-direction: column;
+    }
+  }
+  .wysiwyg-content {
+    margin: 0 auto;
+    position: relative;
+  }
+
+  .small {
+    width: 900px;
+    max-width: 80%;
+  }
+
+  .medium .wysiwyg-content {
+    max-width: 84%;
+  }
+  .image {
+    min-width: 45%;
+    max-width: 45%;
+    border-radius: rwd(32, 48);
+    overflow: hidden;
+
+    @include atMedium {
+      min-width: 100%;
+      max-width: 100%;
+    }
+    
+  }
+}

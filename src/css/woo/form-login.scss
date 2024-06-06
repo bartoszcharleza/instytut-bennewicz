@@ -1,0 +1,149 @@
+.section-form-login {
+  .section-container {
+    width: 1080px;
+  }
+
+  .login-and-register {
+    border-radius: rwd(24, 50);
+    background: $glass-block-background;
+    border: $glass-block-border;
+    box-shadow: $glass-block-shadow;
+    padding: rwd(32, 64);
+    .login-container {
+      .woocommerce-form-login {
+        padding: 0;
+        border: none;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        text-align: center;
+        .woocommerce-form-row {
+          width: 49.3%;
+
+          @include atMedium {
+            width: 100%;
+          }
+        }
+
+        .form-row-wide {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+        }
+
+        .btn {
+          margin-top: 24px;
+          margin-bottom: 32px;
+        }
+      }
+      .login-title {
+        text-align: center;
+        margin-top: 34px;
+      }
+      .login-logo {
+        margin: auto auto;
+        width: 100%;
+        height: 98px;
+      }
+    }
+
+    .register-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: rwd(32, 48);
+      padding-top: rwd(32, 48);
+      border-top: 2px solid #ffffff10;
+
+      .woocommerce-form-register {
+        padding: 0;
+        border: none;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 3%;
+        text-align: left;
+
+        @include atMedium {
+          text-align: left;
+        }
+
+        .woocommerce-form-row {
+          width: calc(30%);
+
+          @include atMedium {
+            width: 100%;
+          }
+        }
+        .woocommerce-privacy-policy-text {
+          display: none;
+        }
+
+        .form-row.privacy {
+          width: 100%;
+        }
+      }
+      .register-button-wrap {
+        margin: 0 auto;
+        .btn {
+          margin: 24px auto 0;
+        }
+      }
+
+      .woocommerce-password-strength {
+        border-radius: 8px;
+        margin-top: 4px;
+        background-color: transparent !important;
+        background: $color-secondary-gradient;
+      }
+    }
+
+    .lost_password {
+      font-weight: 600;
+    }
+
+    a {
+      font-weight: 600;
+      color: $color-secondary;
+      text-decoration: underline;
+    }
+
+    input[type='checkbox'] {
+      background: white;
+      margin-right: 8px;
+      width: 16px;
+      height: 16px;
+      padding: 0px;
+      border-bottom: 0px;
+      border: 2px solid #00000030;
+
+      &:checked {
+        background: rgb(2, 0, 36);
+        background: radial-gradient(
+          circle,
+          rgba(2, 0, 36, 1) 40%,
+          rgba(255, 255, 255, 1) 40%,
+          rgba(255, 255, 255, 1) 100%
+        );
+      }
+    }
+
+    input[type='text'],
+    input[type='email'],
+    input[type='tel'],
+    input[type='password'] {
+      width: 100%;
+      padding: 24px;
+      border: 1px solid #a1b0be;
+      border-radius: 100px;
+      &::placeholder {
+        color: #ffffff90;
+      }
+    }
+    .show-password-input {
+      right: 22px !important;
+      top: 15px !important;
+    }
+  }
+}

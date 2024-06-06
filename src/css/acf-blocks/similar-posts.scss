@@ -1,0 +1,116 @@
+.similar-posts {
+  .section-container {
+    margin-top: -16px;
+    padding-bottom: rwd(96, 124);
+  }
+  .swiper-container {
+    overflow: hidden;
+  }
+
+  .blog-post-content + & .section-container {
+    padding-top: 0;
+  }
+  .post {
+    position: relative;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+    background-size: cover;
+    background-position: center;
+    padding: 0px;
+    gap: rwd(24, 48);
+
+    &__image {
+      width: 43%;
+      height: 100%;
+      inset: 0;
+      border-radius: rwd(24, 50);
+      aspect-ratio: 1 / 1;
+    }
+
+    &-content {
+      flex: 1;
+    }
+
+    &__image {
+      object-fit: cover;
+    }
+    &__content {
+      z-index: 2;
+      position: relative;
+    }
+
+    &__category {
+      color: $color-secondary;
+      font-size: rwd(12, 16);
+      padding-top: rwd(8, 16);
+      padding-bottom: rwd(8, 16);
+      padding-left: rwd(16, 32);
+      padding-right: rwd(16, 32);
+      border: 2px solid $color-secondary;
+      display: block;
+      width: fit-content;
+      border-radius: rwd(64, 100);
+      margin-bottom: rwd(16, 22);
+      @include atMedium {
+        display: none;
+      }
+    }
+
+    &__details {
+      color: #acc5d6;
+      font-size: rwd(12, 14);
+      margin-bottom: rwd(12, 18);
+      display: flex;
+      gap: 8px;
+
+      @include atMedium {
+        flex-direction: column;
+      }
+    }
+
+    &__title {
+      font-size: rwd(18, 24);
+      margin-bottom: rwd(16, 22);
+    }
+
+    &__excerpt {
+      font-size: 14px;
+      font-style: italic;
+      margin-bottom: rwd(24, 32);
+    }
+  }
+
+  .swiper-buttons {
+    position: relative;
+
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    @include atMedium {
+      bottom: unset;
+    }
+  }
+  .swiper-button-prev-4 {
+    position: relative;
+    all: unset;
+    cursor: pointer;
+  }
+
+  .swiper-button-next-4 {
+    position: relative;
+    all: unset;
+    cursor: pointer;
+  }
+
+  .swiper-buttons-line {
+    width: 50px;
+    margin: 0 24px;
+    height: 1px;
+    background: $color-secondary-gradient;
+  }
+}

@@ -1,0 +1,24 @@
+section.reports{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: $base-colour;
+    p,ul,a,li,ol{
+        color: $base-colour;
+    }
+
+    .wisdm-reports{
+        width: 1400px!important;
+        max-width: 100vw!important;
+    }
+
+    .wp-block-columns{
+        background-color: white;
+        border-radius: 16px;
+    }
+
+    .lr-top-tiles{
+        width: 100%;
+    }
+}
